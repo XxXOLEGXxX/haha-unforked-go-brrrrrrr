@@ -25,16 +25,16 @@ addLayer("apt", {
             {key: "t", description: "Reset for anti-planck times", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
         ],
         layerShown(){return true},
+    },
     upgrades: {
-        rows: # of rows
-        cols: # of columns
-        11: {
-            title: "Time Accelerator",
-            description: "Doubles the amount of anti-planck times gained per second.",
-            effect(return new Decimal(1)),
-            cost:  "50"
-            unlocked()
-        }
+            rows: 2,
+            cols: 3,
+            11: {
+                title: "Time Acceleration",
+                description: "Gain 1 more anti-planck time every second.",
+                cost: new Decimal(1),
+                unlocked() { return player[this.layer].unlocked }, // The upgrade is only visible when this is true
+            },
 })
 
 addLayer("apl", {
