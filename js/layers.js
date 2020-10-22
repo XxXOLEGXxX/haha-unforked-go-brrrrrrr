@@ -7,7 +7,7 @@ addLayer("apt", {
 			points: new Decimal(0),
         }},
         color: "#FFFFFF",
-        requires: new Decimal(1), // Can be a function that takes requirement increases into account
+        requires: new Decimal(10), // Can be a function that takes requirement increases into account
         resource: "anti planck time", // Name of prestige currency
         baseResource: "plotinium", // Name of resource prestige is based on
         baseAmount() {return player.plotinium}, // Get the current amount of baseResource
