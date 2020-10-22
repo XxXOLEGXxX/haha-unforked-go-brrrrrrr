@@ -6,7 +6,7 @@ addLayer("apt", {
             unlocked: true,
 			points: new Decimal(0),
         }},
-        color: "#000001",
+        color: "#424242",
         requires: new Decimal(10), // Can be a function that takes requirement increases into account
         resource: "anti-planck times", // Name of prestige currency
         baseResource: "mysterious shits", // Name of resource prestige is based on
@@ -25,6 +25,16 @@ addLayer("apt", {
             {key: "t", description: "Reset for anti-planck times", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
         ],
         layerShown(){return true},
+    upgrades: {
+        rows: # of rows
+        cols: # of columns
+        11: {
+            title: "Time Accelerator",
+            description: "Doubles the amount of anti-planck times gained per second.",
+            effect(return new Decimal(1)),
+            cost:  "50"
+            more features
+        }
 })
 
 addLayer("apl", {
@@ -35,7 +45,7 @@ addLayer("apl", {
             unlocked: true,
 			points: new Decimal(0),
         }},
-        color: "#FFFFF1",
+        color: "#F4F2F0",
         requires: new Decimal(10), // Can be a function that takes requirement increases into account
         resource: "anti-planck lengths", // Name of prestige currency
         baseResource: "mysterious shits 2", // Name of resource prestige is based on
