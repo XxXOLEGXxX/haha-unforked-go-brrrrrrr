@@ -6,7 +6,7 @@ addLayer("apt", {
             unlocked: true,
 			points: new Decimal(0),
         }},
-        color: "#000000",
+        color: "#000001",
         requires: new Decimal(10), // Can be a function that takes requirement increases into account
         resource: "anti-planck times", // Name of prestige currency
         baseResource: "mysterious shits", // Name of resource prestige is based on
@@ -35,7 +35,7 @@ addLayer("apl", {
             unlocked: true,
 			points: new Decimal(0),
         }},
-        color: "#FFFFFF",
+        color: "#FFFFF1",
         requires: new Decimal(10), // Can be a function that takes requirement increases into account
         resource: "anti-planck lengths", // Name of prestige currency
         baseResource: "mysterious shits 2", // Name of resource prestige is based on
