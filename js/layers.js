@@ -10,7 +10,7 @@ addLayer("apt", {
         requires: new Decimal(10), // Can be a function that takes requirement increases into account
         resource: "anti planck time", // Name of prestige currency
         baseResource: "mysterious shit", // Name of resource prestige is based on
-        baseAmount() {return player.points}, // Get the current amount of baseResource
+        baseAmount() {return player.mysterious shit}, // Get the current amount of baseResource
         type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
         exponent: 0.5, // Prestige currency exponent
         gainMult() { // Calculate the multiplier for main currency from bonuses
