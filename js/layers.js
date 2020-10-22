@@ -6,11 +6,11 @@ addLayer("apt", {
             unlocked: true,
 			points: new Decimal(0),
         }},
-        color: "#4BDC13",
-        requires: new Decimal(10), // Can be a function that takes requirement increases into account
+        color: "#FFFFFF",
+        requires: new Decimal(1), // Can be a function that takes requirement increases into account
         resource: "anti planck time", // Name of prestige currency
-        baseResource: "mysterious shit", // Name of resource prestige is based on
-        baseAmount() {return player.mysterious shit}, // Get the current amount of baseResource
+        baseResource: "plotinium", // Name of resource prestige is based on
+        baseAmount() {return player.points}, // Get the current amount of baseResource
         type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
         exponent: 0.5, // Prestige currency exponent
         gainMult() { // Calculate the multiplier for main currency from bonuses
@@ -18,11 +18,11 @@ addLayer("apt", {
             return mult
         },
         gainExp() { // Calculate the exponent on main currency from bonuses
-            return new Decimal(1)
+            return new Decimal(0.1)
         },
         row: 0, // Row the layer is in on the tree (0 is the first row)
         hotkeys: [
-            {key: "a", description: "Reset for prestige points", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+            {key: "a", description: "Reset for anti planck times", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
         ],
         layerShown(){return true},
 })
