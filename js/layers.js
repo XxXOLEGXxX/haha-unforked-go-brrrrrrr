@@ -33,7 +33,7 @@ addLayer("apt", {
             description: "Doubles the amount of anti-planck times gained per second.",
             effect(return new Decimal(1)),
             cost:  "50"
-            more features
+            unlocked()
         }
 })
 
