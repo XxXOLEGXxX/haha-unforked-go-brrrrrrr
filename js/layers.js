@@ -8,7 +8,7 @@ addLayer("apt", {
         }},
         color: "#FFFFFF",
         requires: new Decimal(10), // Can be a function that takes requirement increases into account
-        resource: "plotinum", // Name of prestige currency
+        resource: "plotinum points", // Name of prestige currency
         baseResource: "plotinum", // Name of resource prestige is based on
         baseAmount() {return player.plotinum}, // Get the current amount of baseResource
         type: "normal", // normal: cost to gain currency depends on amount gained. static: cost depends on how much you already have
