@@ -46,9 +46,9 @@
             },
             effect() {
                 let ret = player[this.layer].points.add(1).root(2);
-                if (hasUpgrade("s", 21)) ret = ret.pow(1.01)
-                if (hasUpgrade("s", 23)) ret = ret.pow(1,010100503341741585660644790642)
-                if (hasUpgrade("s", 31)) ret = player.s.points.add(1).pow(1.42)
+                if (hasUpgrade("s", 21)) ret = ret.times(layers.s.upgrades[21].effect())
+                if (hasUpgrade("s", 23)) ret = ret.times(layers.s.upgrades[23].effect())
+                if (hasUpgrade("s", 31)) ret = ret.times(layers.s.upgrades[31].effect())
                 return ret;
             },
             effectDisplay() {
@@ -61,6 +61,14 @@
             cost: new Decimal(20),
             unlocked() { 
                 return (hasUpgrade("s", 12) && hasUpgrade("s", 11));
+            },
+            effect(){
+            let ret = 1.01
+            if (hasUpgrade("s", 23)) = ret.times(layers.s.upgrades[31].effect())
+            if (hasUpgrade("s", 31)) = ret.times(layers.s.upgrades[31].effect())
+            return ret;
+            },
+            effectDisplay(fx) { return "×" + format(fx) }
             },
         },
         22: {
@@ -77,6 +85,13 @@
             cost: new Decimal(100),
             unlocked() { 
                 return (hasUpgrade("s", 21) && hasUpgrade("s", 11));
+            },
+            effect(){
+            let ret = 1.01
+            if (hasUpgrade("s", 31)) = ret.times(layers.s.upgrades[31].effect())
+            return ret;
+            },
+            effectDisplay(fx) { return "×" + format(fx) }
             },
         },
  31: {
