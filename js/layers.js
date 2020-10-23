@@ -39,4 +39,5 @@
             },
             effectDisplay() { return format(this.effect()) }, // Add formatting to the effect
         },
+    },
 })
