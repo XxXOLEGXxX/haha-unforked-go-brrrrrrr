@@ -62,7 +62,6 @@
                 return (hasUpgrade("s", 12) && hasUpgrade([this.layer], 11));
             },
         },
-    },
         22: {
             title: "Supreme Hexagonity.",
             description: "You'll see soon. (WIP)",
