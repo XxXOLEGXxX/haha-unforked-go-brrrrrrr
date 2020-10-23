@@ -68,14 +68,6 @@
             effectDisplay(fx) { return "×" + format(fx) }, // Add formatting to the effect  
         },
     },
-        22: {
-            title: "Supreme Hexagonity.",
-            description: "You'll see soon. (WIP)",
-            cost: new Decimal(1e9001),
-            unlocked() { 
-                return (hasUpgrade("s", 21) && hasUpgrade([this.layer], 11));
-            },
-        },
         23: {
             title: "Another exponent...?",
             description: "Adds another ^1.01 to both ''Tiny desk exponent'' and ''Exponent'' upgrades.",
@@ -83,6 +75,5 @@
             unlocked() { 
                 return (hasUpgrade("s", 21) && hasUpgrade([this.layer], 11));
             },
-        },
-    }
+       }
 })
