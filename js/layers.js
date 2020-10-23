@@ -36,7 +36,8 @@
             description: "Speeds up your unknown plot energy gain.",
             cost: new Decimal(1),
             effect() {
-            gain = 1;
+            let gain11" = new Decimal(0.01666666666666666666666666666667)
+            return gain11
             },
        }
     }
