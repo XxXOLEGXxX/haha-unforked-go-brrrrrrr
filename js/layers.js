@@ -76,7 +76,7 @@
             description: "You'll see soon. (WIP)",
             cost: new Decimal(1e9001),
             unlocked() { 
-                return (hasUpgrade("s", 21) && hasUpgrade("s", 11));
+                return (hasUpgrade("s", 21));
             },
         },
         23: {
@@ -84,7 +84,7 @@
             description: "Adds another ^1.01 to both ''Tiny desk exponent'' and ''Exponent'' upgrades.",
             cost: new Decimal(100),
             unlocked() { 
-                return (hasUpgrade("s", 21) && hasUpgrade("s", 11));
+                return (hasUpgrade("s", 21));
             },
             effect() {
             let ret = new Decimal(1.01)
@@ -99,7 +99,7 @@
             description: "Exponents all the upgrades based on unspent shenanigans",
             cost: new Decimal(250),
             unlocked() { 
-                return (hasUpgrade("s", 23) && hasUpgrade("s", 21));
+                return (hasUpgrade("s", 23));
             },
             effect() {
             let ret = new Decimal(1.42)
