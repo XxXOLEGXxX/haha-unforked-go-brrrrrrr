@@ -46,8 +46,7 @@
             },
             effect() {
                 let ret = player[this.layer].points.add(1).root(2);
-                if (hasUpgrade(this.layer, 21)) ret = ret.pow(1.01)
-                if (hasUpgrade(this.layer, 23)) ret = ret.pow(1,010100503341741585660644790642)
+                if (hasUpgrade(this.layer, 23)) ret = ret.pow(1.01)
                 return ret;
             },
             effectDisplay() {
@@ -61,13 +60,15 @@
             unlocked() { 
                 return (hasUpgrade("s", 12) && hasUpgrade([this.layer], 11));
             },
-            effectDisplay() {
-                if (hasUpgrade(this.layer, 23))
-                    then (return format"^1,0101")};
-                else return format "^1,01";
+            effect() {
+                let ret = upgradeEffect(this.layer, 12).pow(1.01);
+                if (hasUpgrade(this.layer, 23)) ret = ret.pow(1.01)
+                return ret;
+            },
+            effectDisplay(fx) { return "×" + format(fx) }, // Add formatting to the effect  
             }
         },
-        },
+    },
         22: {
             title: "Supreme Hexagonity.",
             description: "You'll see soon. (WIP)",
