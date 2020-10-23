@@ -79,10 +79,13 @@
         23: {
             title: "Another exponent...?",
             description: "Adds another ^1.01 to both ''Tiny desk exponent'' and ''Exponent'' upgrades.",
-            cost: new Decimal(1000000),
+            cost: new Decimal(100),
             unlocked() { 
                 return (hasUpgrade("s", 21) && hasUpgrade([this.layer], 11));
             },
         },
     }
+hotkeys: [
+		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer) } },
+	],
 })
