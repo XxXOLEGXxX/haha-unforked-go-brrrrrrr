@@ -59,7 +59,6 @@
             unlocked() { 
                 return (player.p.points.gte(20));
             },
-        },
         22: {
             title: "WIP.",
             description: "WIP.",
@@ -67,7 +66,6 @@
             unlocked() { 
                 return (player.p.points.gte(20));
             },
-        },
         23: {
             title: "WIP.",
             description: "WIP.",
@@ -75,7 +73,6 @@
             unlocked() { 
                 return (player.p.points.gte(20));
             },
-        },
         31: {
             title: "WIP.",
             description: "WIP.",
@@ -83,7 +80,6 @@
             unlocked() { 
                 return (player.p.points.gte(20));
             },
-        },
         32: {
             title: "WIP.",
             description: "WIP.",
@@ -91,6 +87,5 @@
             unlocked() { 
                 return (player.p.points.gte(20));
             },
-        },
     }
 })
