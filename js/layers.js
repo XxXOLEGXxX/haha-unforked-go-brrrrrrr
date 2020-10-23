@@ -48,6 +48,7 @@
                 let ret = player[this.layer].points.add(1).root(2);
                 if (hasUpgrade("s", 21)) ret = ret.pow(1.01)
                 if (hasUpgrade("s", 23)) ret = ret.pow(1,010100503341741585660644790642)
+                if (hasUpgrade("s", 31)) ret = player.s.points.add(1).pow(1.42)
                 return ret;
             },
             effectDisplay() {
@@ -77,6 +78,14 @@
             unlocked() { 
                 return (hasUpgrade("s", 21) && hasUpgrade("s", 11));
             },
-       }
+        },
+ 31: {
+            title: "But enough grinding, have at you!",
+            description: "Exponents all the upgrades based on unspent shenanigans",
+            cost: new Decimal(250),
+            unlocked() { 
+                return (hasUpgrade("s", 23) && hasUpgrade("s", 21));
+            },
+        },
     }
 })
