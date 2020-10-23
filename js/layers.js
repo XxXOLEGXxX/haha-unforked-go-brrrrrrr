@@ -30,11 +30,11 @@
 
 
     upgrades: {
-        rows: 1,
+        rows: 3,
         cols: 3,
         11: {
             title: "Every 60 seconds in real life a minute passes.",
-            description: "Speeds up your plot gain by ALOT.",
+            description: "Boosts your plot gain by ALOT.",
             cost: new Decimal(1),
         },
         12: {
@@ -51,6 +51,42 @@
             effectDisplay() {
                 return format(this.effect())+"x";
             }
+        },
+        21: {
+            title: "Every 60 seconds in real life a minute passes.",
+            description: "Speeds up your plot gain by ALOT.",
+            cost: new Decimal(1),
+            unlocked() { 
+                return (player.p.points.gte(20));
+            },
+        },
+        22: {
+            title: "Every 60 seconds in real life a minute passes.",
+            description: "Speeds up your plot gain by ALOT.",
+            cost: new Decimal(1),
+            unlocked() { 
+                return (player.p.points.gte(20));
+        },
+        23: {
+            title: "Every 60 seconds in real life a minute passes.",
+            description: "Speeds up your plot gain by ALOT.",
+            cost: new Decimal(1),
+            unlocked() { 
+                return (player.p.points.gte(20));
+        },
+        31: {
+            title: "Every 60 seconds in real life a minute passes.",
+            description: "Speeds up your plot gain by ALOT.",
+            cost: new Decimal(1),
+            unlocked() { 
+                return (player.p.points.gte(5));
+        },
+        32: {
+            title: "Every 60 seconds in real life a minute passes.",
+            description: "Speeds up your plot gain by ALOT.",
+            cost: new Decimal(1),
+            unlocked() { 
+                return (player.p.points.gte(5));
         },
     }
 })
