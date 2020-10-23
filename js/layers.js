@@ -68,6 +68,9 @@
                 if (hasUpgrade([this.layer], 31)) ret = ret.pow(layers.s.upgrades[31].effect())
             return ret;
             },
+            effectDisplay() {
+                return format(this.effect())+"x";
+            },
         22: {
             title: "Supreme Hexagonity.",
             description: "You'll see soon. (WIP)",
@@ -88,6 +91,7 @@
                 if (hasUpgrade([this.layer], 31)) ret = ret.pow(layers.s.upgrades[31].effect())
             return ret;
             },
+            effectDisplay(fx) { return "×" + format(fx) },
         },
  31: {
             title: "But enough grinding, have at you!",
