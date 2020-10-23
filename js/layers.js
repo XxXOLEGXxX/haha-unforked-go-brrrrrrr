@@ -108,5 +108,17 @@
             return ret;
             },
         },
+32: {
+            title: "The finale of grind.",
+            description: "You gain 10% of shenanigans per second, as if you were doing fast resets.",
+            cost: new Decimal(1),
+            unlocked() { 
+                return (hasUpgrade("s", 23));
+            },
+            effect() {
+            let ret = generatePoints(“x”, 100)
+            return ret;
+            },
+        },
     }
 })
