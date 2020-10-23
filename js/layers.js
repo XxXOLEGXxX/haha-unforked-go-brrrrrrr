@@ -85,7 +85,4 @@
             },
         },
     }
-hotkeys: [
-		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer) } },
-	],
 })
