@@ -33,7 +33,7 @@ function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
 
-	let gain = new Decimal(0.01666666666666666666666666666667)
+	let gain = new Decimal(0.01666666666666666666666666666667 + yey)
 	return gain
 }
 
