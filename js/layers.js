@@ -20,7 +20,6 @@
 
         gainMult() {                            // Returns your multiplier to your gain of the prestige resource
             let mult = new Decimal(1);
-            if (hasUpgrade(this.layer, 12)) mult = mult.times(upgradeEffect(this.layer, 12))
             return mult
         },
         gainExp() {                             // Returns your exponent to your gain of the prestige resource
