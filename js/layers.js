@@ -34,7 +34,6 @@
             title: "Every 60 seconds in real life a minute passes.",
             description: "Speeds up your unknown plot energy gain.",
             cost: new Decimal(1),
-            unlocked() { return player[this.layer].unlocked }, // The upgrade is only visible when this is true
         },
     },
 })
