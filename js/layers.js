@@ -41,5 +41,6 @@
                 return ret;
             },
             effectDisplay() { return format(this.effect())+"x" }, // Add formatting to the effect
-    },
+        },
+    }
 })
