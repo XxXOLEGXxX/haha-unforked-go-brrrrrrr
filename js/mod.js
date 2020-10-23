@@ -1,3 +1,5 @@
+let shenanigans11 = new Decimal(0)
+
 let modInfo = {
 	name: "Antimatter Tree (it's trash)",
 	id: "moddemo",
@@ -33,7 +35,7 @@ function getPointGen() {
 	if(!canGenPoints())
 		return new Decimal(0)
 
-	let gain = new Decimal(0.01666666666666666666666666666667 + yey)
+	let gain = new Decimal(0.01666666666666666666666666666667 + shenanigans11)
 	return gain
 }
 
