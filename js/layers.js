@@ -36,7 +36,6 @@
             description: "Speeds up your unknown plot energy gain.",
             cost: new Decimal(1),
             effect() {
-            player[this.layer].points = 50
             },
        }
     }
