@@ -25,15 +25,15 @@ addLayer("apt", {
             {key: "t", description: "Reset for anti-planck times", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
         ],
         layerShown(){return true},
-   upgrades: {
-        rows: 1,
-        cols: 1,
+  upgrades: {
+        rows: 1
+        cols: 1
         11: {
-            title: "Time Acceleration.",
-            description: "Increases your anti-planck time generation exponentially, based on your anti-planck times.",
-            effect(): mult = new Decimal(1^1.1),
-        },
-    },
+            description: "Blah",
+            more features
+        }
+        etc
+    }
 })
 
 addLayer("apl", {
