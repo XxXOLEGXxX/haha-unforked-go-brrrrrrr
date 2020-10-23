@@ -35,6 +35,9 @@
             title: "Every 60 seconds in real life a minute passes.",
             description: "Speeds up your unknown plot energy gain.",
             cost: new Decimal(1),
+            effect() {
+            gain = new Decimal(0.01666666666666666666666666666667 + 0.98333333333333333333333333333333)
+            },
        }
     }
 })
