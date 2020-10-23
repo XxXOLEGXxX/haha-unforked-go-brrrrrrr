@@ -57,35 +57,7 @@
             description: "WIP.",
             cost: new Decimal(1),
             unlocked() { 
-                return (player.p.points.gte(20));
-            },
-        22: {
-            title: "WIP.",
-            description: "WIP.",
-            cost: new Decimal(1),
-            unlocked() { 
-                return (player.p.points.gte(20));
-            },
-        23: {
-            title: "WIP.",
-            description: "WIP.",
-            cost: new Decimal(1),
-            unlocked() { 
-                return (player.p.points.gte(20));
-            },
-        31: {
-            title: "WIP.",
-            description: "WIP.",
-            cost: new Decimal(1),
-            unlocked() { 
-                return (player.p.points.gte(20));
-            },
-        32: {
-            title: "WIP.",
-            description: "WIP.",
-            cost: new Decimal(1),
-            unlocked() { 
-                return (player.p.points.gte(20));
+                return (player.p.points(20));
             },
     }
 })
