@@ -19,7 +19,9 @@
         exponent: 0.5,                          // "normal" prestige gain is (currency^exponent)
 
         gainMult() {                            // Returns your multiplier to your gain of the prestige resource
-            return new Decimal(1)               // Factor in any bonuses multiplying gain here
+            let mult = new Decimal(1)               // Factor in any bonuses multiplying gain here
+            if (hasUpgrade(this.layer, 12)) mult = mult.times(upgradeEffect(this.layer, 21))
+            return mult
         },
         gainExp() {                             // Returns your exponent to your gain of the prestige resource
             return new Decimal(1)
@@ -30,11 +32,23 @@
 
     upgrades: {
         rows: 1,
-        cols: 1,
+        cols: 3,
         11: {
             title: "Every 60 seconds in real life a minute passes.",
-            description: "Speeds up your unknown plot energy gain.",
+            description: "Speeds up your plot gain by ALOT.",
             cost: new Decimal(1),
+        },
+        12: {
+            title: "Vibing.",
+            description: "Boosts your plot gain by unspent shenanigans.",
+            cost: new Decimal(10),
+            unlocked() { return hasUpgrade(this.layer, 11) },
+            effect() {
+                let ret = getPointGen().add(1).root(2);
+                return ret;
+            },
+            effectDisplay() {
+                return format(this.effect())+"x";
         },
     }
 })
