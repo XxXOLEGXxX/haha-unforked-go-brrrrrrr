@@ -59,7 +59,7 @@
             description: "Adds ^1.01 to the previous upgrade.",
             cost: new Decimal(20),
             unlocked() { 
-                return (hasUpgrade("s", 12) && hasUpgrade([this.layer], 11));
+                return (hasUpgrade("s", 12) && hasUpgrade("s", 11));
             },
         },
         22: {
@@ -67,7 +67,7 @@
             description: "You'll see soon. (WIP)",
             cost: new Decimal(1e9001),
             unlocked() { 
-                return (hasUpgrade("s", 21) && hasUpgrade([this.layer], 11));
+                return (hasUpgrade("s", 21) && hasUpgrade("s", 11));
             },
         },
         23: {
@@ -75,7 +75,7 @@
             description: "Adds another ^1.01 to both ''Tiny desk exponent'' and ''Exponent'' upgrades.",
             cost: new Decimal(100),
             unlocked() { 
-                return (hasUpgrade("s", 21) && hasUpgrade([this.layer], 11));
+                return (hasUpgrade("s", 21) && hasUpgrade("s", 11));
             },
        }
 })
