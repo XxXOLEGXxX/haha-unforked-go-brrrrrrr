@@ -64,8 +64,8 @@
             },
             effect() {
             let ret = new Decimal(1.01)
-                if (hasUpgrade([this.layer], 23)) ret = ret.pow(layers.s.upgrades[23].effect())
-                if (hasUpgrade([this.layer], 31)) ret = ret.pow(layers.s.upgrades[31].effect())
+                if (hasUpgrade("s", 23)) ret = ret.pow(layers.s.upgrades[23].effect())
+                if (hasUpgrade("s", 31)) ret = ret.pow(layers.s.upgrades[31].effect())
             return ret;
             },
             effectDisplay() {
@@ -88,7 +88,7 @@
             },
             effect() {
             let ret = new Decimal(1.01)
-                if (hasUpgrade([this.layer], 31)) ret = ret.pow(layers.s.upgrades[31].effect())
+                if (hasUpgrade("s", 31)) ret = ret.pow(layers.s.upgrades[31].effect())
             return ret;
             },
             effectDisplay(fx) { return "×" + format(fx) },
