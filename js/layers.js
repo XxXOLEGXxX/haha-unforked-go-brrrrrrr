@@ -99,7 +99,9 @@
             unlocked() { 
                 return (hasUpgrade("s", 23) && hasUpgrade("s", 21));
             },
-            effect() {ret.pow(1.42)
+            effect() {
+            let ret = ret.pow(1.42)
+            return ret;
             },
         },
     }
