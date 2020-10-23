@@ -64,7 +64,7 @@
             },
             effect(){
             let ret = 1.01
-            if (hasUpgrade("s", 23)) = ret.times(layers.s.upgrades[31].effect())
+            if (hasUpgrade("s", 23)) = ret.times(layers.s.upgrades[23].effect())
             if (hasUpgrade("s", 31)) = ret.times(layers.s.upgrades[31].effect())
             return ret;
             },
