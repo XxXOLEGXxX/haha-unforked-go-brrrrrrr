@@ -36,7 +36,7 @@
             description: "Speeds up your unknown plot energy gain.",
             cost: new Decimal(1),
             onPurchase() {
-            let !gain = 1
+            gain = 1
             },
        }
     }
