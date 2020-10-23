@@ -66,7 +66,6 @@
                 return ret;
             },
             effectDisplay(fx) { return "×" + format(fx) }, // Add formatting to the effect  
-            },
         },
     },
         22: {
