@@ -36,9 +36,12 @@
             description: "Speeds up your unknown plot energy gain.",
             cost: new Decimal(1),
             effect() {
-            let gain11" = new Decimal(0.01666666666666666666666666666667)
-            return gain11
+                let ret = player[this.layer].upgrade11Power;
+                return ret;
             },
+            effectDisplay() {
+                return format(this.effect())+"/s";
+            },        
        }
     }
 })
