@@ -35,7 +35,6 @@
             title: "Every 60 seconds in real life a minute passes.",
             description: "Speeds up your unknown plot energy gain.",
             cost: new Decimal(1),
-            unl() { return (player.p.unl * 60) },
        }
     }
 })
