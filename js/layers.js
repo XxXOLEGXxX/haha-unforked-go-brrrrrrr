@@ -76,7 +76,7 @@
             description: "You'll see soon. (WIP)",
             cost: new Decimal(1e9001),
             unlocked() { 
-                return (hasUpgrade("s", 21));
+                return (hasUpgrade([this.layer], 21));
             },
         },
         23: {
@@ -84,16 +84,16 @@
             description: "Adds another ^1.01 to both ''Tiny desk exponent'' and ''Exponent'' upgrades.",
             cost: new Decimal(100),
             unlocked() { 
-                return (hasUpgrade("s", 21));
+                return (hasUpgrade([this.layer], 21));
             },
             effect() {
             let ret = new Decimal(1.01)
                 if (hasUpgrade("s", 31)) ret = ret.pow(layers.s.upgrades[31].effect())
             return ret;
             },
-            effectDisplay(fx) { return "×" + format(fx) },
-        },
-    },
+            effectDisplay() {
+                return format(this.effect())+"x";
+            },
  31: {
             title: "But enough grinding, have at you!",
             description: "Exponents all the upgrades based on unspent shenanigans",
