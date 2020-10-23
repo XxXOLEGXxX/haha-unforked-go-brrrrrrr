@@ -52,12 +52,5 @@
                 return format(this.effect())+"x";
             }
         },
-        21: {
-            title: "WIP.",
-            description: "WIP.",
-            cost: new Decimal(1),
-            unlocked() { 
-                return (hasUpgrade("s", 12) || return (player.p.points(20));
-            },
     }
 })
