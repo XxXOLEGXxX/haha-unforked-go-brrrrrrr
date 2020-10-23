@@ -43,6 +43,17 @@ function getPointGen() {
 	return gain
 }
 
+function rowReset(row, layer) {
+	for (lr in ROW_LAYERS[row]) {
+		if (layers[lr].doReset) {
+			player[lr].active = null // Exit challenges on any row reset on an equal or higher row
+			layers[lr].doReset(layer)
+		}
+		else
+			if (layers[layer].row > layers[lr].row) fullLayerReset(lr)
+	}
+}
+
 // You can add non-layer related variables that should to into "player" and be saved here, along with default values
 function addedPlayerData() { return {
 }}
