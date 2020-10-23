@@ -30,8 +30,8 @@
 
 
     upgrades: {
-        rows: 1,
-        cols: 2,
+        rows: 3,
+        cols: 3,
         11: {
             title: "Every 60 seconds in real life a minute passes.",
             description: "Boosts your plot gain by ALOT.",
@@ -51,6 +51,11 @@
             effectDisplay() {
                 return format(this.effect())+"x";
             }
+        },
+        22: {
+            title: "Supreme Hexagonity.",
+            description: "You'll see soon..",
+            cost: new Decimal(1000000),
         },
     }
 })
