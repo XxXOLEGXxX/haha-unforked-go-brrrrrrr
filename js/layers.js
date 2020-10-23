@@ -57,7 +57,7 @@
             description: "WIP.",
             cost: new Decimal(1),
             unlocked() { 
-                return (player.p.points(20));
+                return (hasUpgrade("s", 12) || return (player.p.points(20));
             },
     }
 })
