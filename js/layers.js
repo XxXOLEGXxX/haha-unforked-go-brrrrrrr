@@ -104,7 +104,7 @@
                 return (hasUpgrade("s", 23));
             },
             effect() {
-            let ret = player.points.add(1).root(3).pow.(layers.s.upgrades[12].effect()).root(3);
+            let ret = player.points.add(1).root(3).pow(layers.s.upgrades[12].effect().root(3));
             return ret;
             },
         },
