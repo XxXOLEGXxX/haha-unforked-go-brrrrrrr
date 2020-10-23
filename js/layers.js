@@ -87,8 +87,3 @@
             effectDisplay(fx) { return "×" + format(fx) }
        }
 })
-
-
-hotkeys: [
-		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer) } },
-	],
