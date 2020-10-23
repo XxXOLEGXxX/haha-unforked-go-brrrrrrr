@@ -56,9 +56,6 @@
             title: "WIP.",
             description: "no.",
             cost: new Decimal(585447),
-            unlocked() {
-            return (player.p.points > 20)
-            },
         },
     }
 })
