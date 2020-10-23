@@ -47,6 +47,7 @@
             effect() {
                 let ret = player[this.layer].points.add(1).root(2);
                 if (hasUpgrade(this.layer, 21)) ret = ret.pow(1.01)
+                if (hasUpgrade(this.layer, 23)) ret = ret.pow(1,010100503341741585660644790642)
                 return ret;
             },
             effectDisplay() {
@@ -55,11 +56,17 @@
         },
         21: {
             title: "Tiny desk exponent.",
-            description: "Adds ^ 1.01 to the previous upgrade.",
+            description: "Adds ^1.01 to the previous upgrade.",
             cost: new Decimal(20),
             unlocked() { 
                 return (hasUpgrade("s", 12) && hasUpgrade([this.layer], 11));
             },
+            effectDisplay() {
+                if (hasUpgrade(this.layer, 23))
+                    then {return format"^1,0101"};
+                else return format "^1,01";
+            }
+        },
         },
         22: {
             title: "Supreme Hexagonity.",
@@ -70,8 +77,8 @@
             },
         },
         23: {
-            title: "no u.",
-            description: "haha me go brrrrr",
+            title: "Another exponent...?",
+            description: "Adds another ^1.01 to both ''Tiny desk exponent'' and ''Exponent'' upgrades.",
             cost: new Decimal(1000000),
             unlocked() { 
                 return (hasUpgrade("s", 21) && hasUpgrade([this.layer], 11));
