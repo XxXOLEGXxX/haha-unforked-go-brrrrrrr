@@ -82,11 +82,7 @@
             cost: new Decimal(100),
             unlocked() { 
                 return (hasUpgrade("s", 21) && hasUpgrade([this.layer], 11));
-            }
-        }
-    },
-
-hotkeys: [
-		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer) } },
-	],
+            },
+        },
+    }
 })
