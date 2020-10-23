@@ -61,12 +61,6 @@
             unlocked() { 
                 return (hasUpgrade("s", 12) && hasUpgrade([this.layer], 11));
             },
-            effect() {
-                let ret = "1,01"
-                if (hasUpgrade(this.layer, 23)) ret = ret.pow(1.01)
-                return ret;
-            },
-            effectDisplay(fx) { return "×" + format(fx) }, // Add formatting to the effect  
         },
     },
         22: {
@@ -84,6 +78,5 @@
             unlocked() { 
                 return (hasUpgrade("s", 21) && hasUpgrade([this.layer], 11));
             },
-            effectDisplay(fx) { return "×" + format(fx) }
        }
 })
