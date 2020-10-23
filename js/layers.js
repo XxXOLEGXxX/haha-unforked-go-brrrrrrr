@@ -57,22 +57,22 @@
             description: "Adds small exponent to the previous upgrade.",
             cost: new Decimal(20),
             unlocked() { 
-                return (hasUpgrade("s", 12) || hasUpgrade([this.layer], 11));
+                return (hasUpgrade("s", 12) && hasUpgrade([this.layer], 11));
             },
             effect() {
                 let ret = upgradeEffect("s", 21) ^ 1.01
                 return ret;
             },
             effectDisplay() {
-                return format(this.effect()) + "^"
+                return "^" + format(this.effect())
             }
         },
         22: {
             title: "Supreme Hexagonity.",
             description: "You'll see soon. (WIP)",
-            cost: new Decimal(1e9999999),
+            cost: new Decimal(1e9001),
             unlocked() { 
-                return (hasUpgrade("s", 21) || hasUpgrade([this.layer], 11));
+                return (hasUpgrade("s", 21) && hasUpgrade([this.layer], 11));
             },
         },
         23: {
@@ -80,7 +80,7 @@
             description: "haha me go brrrrr",
             cost: new Decimal(1000000),
             unlocked() { 
-                return (hasUpgrade("s", 21) || hasUpgrade([this.layer], 11));
+                return (hasUpgrade("s", 21) && hasUpgrade([this.layer], 11));
             },
         },
     }
