@@ -69,7 +69,6 @@
             return ret;
             },
             effectDisplay(fx) { return "×" + format(fx) },
-            },
         },
         22: {
             title: "Supreme Hexagonity.",
@@ -92,7 +91,6 @@
             return ret;
             },
             effectDisplay(fx) { return "×" + format(fx) },
-            },
         },
  31: {
             title: "But enough grinding, have at you!",
