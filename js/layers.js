@@ -53,14 +53,14 @@
             }
         },
         21: {
-            title: "Exponent.",
+            title: "Tiny desk exponent.",
             description: "Adds small exponent to the previous upgrade.",
             cost: new Decimal(20),
             unlocked() { 
                 return (hasUpgrade("s", 12) && hasUpgrade([this.layer], 11));
             },
             effect() {
-                let ret = upgradeEffect("s", 21) ^ 1.01;
+                let ret = upgradeEffect("s", 21).tetrate(1.01);
                 return ret;
             },
             effectDisplay() {
