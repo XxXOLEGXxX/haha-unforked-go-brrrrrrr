@@ -30,8 +30,8 @@
 
 
     upgrades: {
-        rows: 3,
-        cols: 3,
+        rows: 2,
+        cols: 2,
         11: {
             title: "Every 60 seconds in real life a minute passes.",
             description: "Boosts your plot gain by ALOT.",
@@ -56,6 +56,11 @@
             title: "WIP.",
             description: "no.",
             cost: new Decimal(585447),
+        },
+        22: {
+            title: "WIP.",
+            description: "no u.",
+            cost: new Decimal(757),
         },
     }
 })
