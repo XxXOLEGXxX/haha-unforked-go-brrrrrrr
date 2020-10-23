@@ -52,4 +52,5 @@
                 return format(this.effect())+"x";
             }
         },
+    }
 })
