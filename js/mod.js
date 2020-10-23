@@ -1,5 +1,5 @@
 let modInfo = {
-	name: "The Demo Tree",
+	name: "Antimatter Tree (it's trash)",
 	id: "moddemo",
 	pointsName: "plots",
 	discordName: "",
@@ -12,7 +12,7 @@ let modInfo = {
 // Set your version in num and name
 let VERSION = {
 	num: "-1",
-	name: "Antimatter Tree (it's trash)",
+	name: "no",
 }
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
