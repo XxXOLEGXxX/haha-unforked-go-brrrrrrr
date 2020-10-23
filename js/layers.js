@@ -63,7 +63,7 @@
                 return (hasUpgrade("s", 12) && hasUpgrade("s", 11));
             },
             effect() {
-            let ret = ret.pow(1.01)
+            let ret = new Decimal(1).pow(1.01)
                 if (hasUpgrade([this.layer], 23)) ret = ret.times(layers.s.upgrades[23].effect())
                 if (hasUpgrade([this.layer], 31)) ret = ret.times(layers.s.upgrades[31].effect())
             return ret;
@@ -86,7 +86,7 @@
                 return (hasUpgrade("s", 21) && hasUpgrade("s", 11));
             },
             effect() {
-            let ret = ret.pow(1.01)
+            let ret = new Decimal(1).pow(1.01)
                 if (hasUpgrade([this.layer], 31)) ret = ret.times(layers.s.upgrades[31].effect())
             return ret;
             },
@@ -100,7 +100,7 @@
                 return (hasUpgrade("s", 23) && hasUpgrade("s", 21));
             },
             effect() {
-            let ret = ret.pow(1.42)
+            let ret = new Decimal(1).pow(1.42)
             return ret;
             },
         },
