@@ -34,8 +34,12 @@
             title: "Every 60 seconds in real life a minute passes.",
             description: "Speeds up your unknown plot energy gain.",
             cost: new Decimal(1),
-            effect(): {gain = new Decimal(1)
+            unlocked() { return (hasUpgrade(this.layer, 11))},
+            effect() { // Calculate bonuses from the upgrade. Can return a single value or an object with multiple values
+                let ret = player[this.layer].points.add(1).pow(player[this.layer].upgrades.includes(24)?1.1:(player[this.layer].upgrades.includes(14)?0.75:0.5)) 
+                if (ret.gte("1e20000000")) ret = ret.sqrt().times("1e10000000")
+                return ret;
             },
+            effectDisplay() { return format(this.effect())+"x" }, // Add formatting to the effect
         },
-    },
 })
