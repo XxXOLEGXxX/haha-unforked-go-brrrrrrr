@@ -30,8 +30,8 @@
 
 
     upgrades: {
-        rows: 2,
-        cols: 3,
+        rows: 1,
+        cols: 2,
         11: {
             title: "Every 60 seconds in real life a minute passes.",
             description: "Boosts your plot gain by ALOT.",
@@ -42,7 +42,7 @@
             description: "Boosts your plot gain by unspent shenanigans.",
             cost: new Decimal(10),
             unlocked() { 
-                return (hasUpgrade("s", 11));
+                return (hasUpgrade("s", 11) || hasUpgrade([this.layer], 11));
             },
             effect() {
                 let ret = player[this.layer].points.add(1).root(2);
