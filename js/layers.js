@@ -4,7 +4,7 @@
             points: new Decimal(1),             // "points" is the internal name for the main resource of the layer.
         }},
 
-        name: "shenanigans shenanigans",
+        name: "shenanigans",
         color: "#420420",                       // The color for this layer, which affects many elements
         resource: "shenanigans",            // The name of this layer's main prestige resource
         row: 0,                                 // The row this layer is on (0 is the first row)
@@ -35,5 +35,6 @@
             description: "Speeds up your unknown plot energy gain.",
             effect() {gain = new Decimal(1)
             },
-        },
+        }
+    }
 })
