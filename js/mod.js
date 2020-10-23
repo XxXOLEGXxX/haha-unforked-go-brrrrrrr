@@ -35,7 +35,6 @@ function getPointGen() {
 
 	let gain = new Decimal(0.01666666666666666666666666666667)
         if (hasUpgrade("s", 11)) gain = gain.add(new Decimal(0.98333333333333333333333333333333));
-        gain = gain.mul(layers.k.effect().pointGainBaseIncrease);
 
 	return gain
 }
