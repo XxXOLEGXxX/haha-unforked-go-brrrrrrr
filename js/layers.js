@@ -34,10 +34,5 @@
             title: "Every 60 seconds in real life a minute passes.",
             description: "Speeds up your unknown plot energy gain.",
             cost: new Decimal(1),
-            effect() { // Calculate bonuses from the upgrade. Can return a single value or an object with multiple values
-                let gain = new Decimal(0,98333333333333333333333333333333)
-            },
-            effectDisplay() { return format(this.effect()) }, // Add formatting to the effect
-        },
     },
 })
