@@ -1,7 +1,7 @@
 let modInfo = {
 	name: "The Demo Tree",
 	id: "moddemo",
-	pointsName: "points",
+	pointsName: "plots",
 	discordName: "",
 	discordLink: "",
 	changelogLink: "https://github.com/Acamaeda/The-Modding-Tree/blob/master/changelog.md",
@@ -11,8 +11,8 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0.0",
-	name: "Literally nothing",
+	num: "-1",
+	name: "Antimatter Tree (it's trash)",
 }
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
