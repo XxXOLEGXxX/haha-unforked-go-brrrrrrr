@@ -51,7 +51,7 @@ addLayer("apl", {
         },
         row: 0, // Row the layer is in on the tree (0 is the first row)
         hotkeys: [
-            {key: "t", description: "Reset for anti-planck lengths", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
+            {key: "l", description: "Reset for anti-planck lengths", onPress(){if (canReset(this.layer)) doReset(this.layer)}},
         ],
         layerShown(){return true},
 })
