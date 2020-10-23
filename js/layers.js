@@ -57,13 +57,22 @@
             description: "no.",
             cost: new Decimal(585447),
             unlocked() {
-            return player[this.layer].points > new Decimal(20)
+                return (hasUpgrade("s", 12) || hasUpgrade(this.layer, 12));
             },
         },
         22: {
             title: "WIP.",
             description: "no u.",
             cost: new Decimal(757),
+            unlocked() {
+                return (hasUpgrade("s", 12) || hasUpgrade(this.layer, 12));
+        },
+        23: {
+            title: "YOU KNOW THE RULES.",
+            description: "AND SO DO I.",
+            cost: new Decimal(420),
+            unlocked() {
+                return (hasUpgrade("s", 12) || hasUpgrade(this.layer, 12));
         },
     }
 })
