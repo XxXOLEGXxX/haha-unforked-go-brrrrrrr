@@ -68,8 +68,7 @@
             if (hasUpgrade("s", 31)) = ret.times(layers.s.upgrades[31].effect())
             return ret;
             },
-            effectDisplay() {
-                return format(this.effect())+"x";
+            effectDisplay(fx) { return "×" + format(fx) },
             },
         },
         22: {
@@ -92,8 +91,7 @@
             if (hasUpgrade("s", 31)) = ret.times(layers.s.upgrades[31].effect())
             return ret;
             },
-            effectDisplay() {
-                return format(this.effect())+"x";
+            effectDisplay(fx) { return "×" + format(fx) },
             },
         },
  31: {
