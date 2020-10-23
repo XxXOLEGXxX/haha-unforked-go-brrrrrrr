@@ -52,5 +52,12 @@
                 return format(this.effect())+"x";
             }
         },
+        21: {
+            title: "WIP.",
+            description: "Boosts your plot gain by ALOT.",
+            cost: new Decimal(1),
+            unlocked() {
+            return (hasUpgrade("s", 12)) & return (player[this.layer].points = 20) || (return player[this.layer].points > 20)},
+        },
     }
 })
