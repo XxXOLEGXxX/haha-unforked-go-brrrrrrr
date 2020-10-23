@@ -1,5 +1,3 @@
-let shenanigans11 = new Decimal(0)
-
 let modInfo = {
 	name: "Antimatter Tree (it's trash)",
 	id: "moddemo",
