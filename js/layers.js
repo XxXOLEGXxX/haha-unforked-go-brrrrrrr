@@ -54,10 +54,11 @@
         },
         21: {
             title: "WIP.",
-            description: "Boosts your plot gain by ALOT.",
-            cost: new Decimal(1),
+            description: "no.",
+            cost: new Decimal(585447),
             unlocked() {
-            return (player.p.points > 20)},
+            return (player.p.points > 20)
+            },
         },
     }
 })
