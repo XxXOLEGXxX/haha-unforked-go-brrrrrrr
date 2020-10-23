@@ -53,7 +53,7 @@
             },
             effectDisplay() {
                 return format(this.effect())+"x";
-            }
+            },
         },
         21: {
             title: "Tiny desk exponent.",
