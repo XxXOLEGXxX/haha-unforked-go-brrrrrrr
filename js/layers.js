@@ -1,12 +1,12 @@
  addLayer("p", {
         startData() { return {                  // startData is a function that returns default data for a layer. 
             unlocked: true,                    // You can add more variables here to add them to your layer.
-            points: new Decimal(0),             // "points" is the internal name for the main resource of the layer.
+            points: new Decimal(1),             // "points" is the internal name for the main resource of the layer.
         }},
 
         name: "plot",
         color: "#420420",                       // The color for this layer, which affects many elements
-        resource: "plot shenanigans",            // The name of this layer's main prestige resource
+        resource: "plot WORK DAMN IT",            // The name of this layer's main prestige resource
         row: 0,                                 // The row this layer is on (0 is the first row)
 
         baseResource: "shenanigans",                 // The name of the resource your prestige gain is based on
