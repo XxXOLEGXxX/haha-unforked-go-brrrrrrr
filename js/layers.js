@@ -71,6 +71,7 @@
             effectDisplay() {
                 return format(this.effect())+"x";
             },
+        },
         22: {
             title: "Supreme Hexagonity.",
             description: "You'll see soon. (WIP)",
@@ -94,6 +95,7 @@
             effectDisplay() {
                 return format(this.effect())+"x";
             },
+        },
  31: {
             title: "But enough grinding, have at you!",
             description: "Exponents all the upgrades based on unspent shenanigans",
