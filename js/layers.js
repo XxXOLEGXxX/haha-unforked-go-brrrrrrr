@@ -104,7 +104,7 @@
                 return (hasUpgrade("s", 23));
             },
             effect() {
-            let ret = player.points.add(1).root(3).root(1).root(4).root(1).root(5).root(9).root(2);
+            let ret = player.points.add(1).root(420);
             return ret;
             },
         },
