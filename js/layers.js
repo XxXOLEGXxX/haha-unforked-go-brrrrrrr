@@ -42,7 +42,7 @@
             description: "Boosts your plot gain by unspent shenanigans.",
             cost: new Decimal(10),
             unlocked() { 
-                return (hasUpgrade("s", 11) || hasUpgrade(this.layer, 11));
+                return (hasUpgrade("s", 11));
             },
             effect() {
                 let ret = player[this.layer].points.add(1).root(2);
@@ -52,27 +52,4 @@
                 return format(this.effect())+"x";
             }
         },
-        21: {
-            title: "WIP.",
-            description: "no.",
-            cost: new Decimal(585447),
-            unlocked() { 
-                return (hasUpgrade("s", 11) || hasUpgrade(this.layer, 11));
-            },
-        },
-        22: {
-            title: "WIP.",
-            description: "no u.",
-            cost: new Decimal(757),
-            unlocked() { 
-                return (hasUpgrade("s", 11) || hasUpgrade(this.layer, 11));
-            },
-        23: {
-            title: "YOU KNOW THE RULES.",
-            description: "AND SO DO I.",
-            cost: new Decimal(420),
-            unlocked() { 
-                return (hasUpgrade("s", 11) || hasUpgrade(this.layer, 11));
-            },
-    }
 })
