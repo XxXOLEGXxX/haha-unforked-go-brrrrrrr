@@ -73,6 +73,7 @@
             cost: new Decimal(1e9999999),
             unlocked() { 
                 return (hasUpgrade("s", 21) || hasUpgrade([this.layer], 11));
+            },
         },
         23: {
             title: "no u.",
@@ -80,6 +81,7 @@
             cost: new Decimal(1000000),
             unlocked() { 
                 return (hasUpgrade("s", 21) || hasUpgrade([this.layer], 11));
+            },
         },
     }
 })
