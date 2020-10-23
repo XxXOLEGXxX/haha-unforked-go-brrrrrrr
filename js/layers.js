@@ -45,7 +45,7 @@
                 return (hasUpgrade("s", 11) || hasUpgrade(this.layer, 11));
             },
             effect() {
-                let ret = getPointGen().add(1).root(2);
+                let ret = player[this.layer].points.add(1).root(2);
                 return ret;
             },
             effectDisplay() {
