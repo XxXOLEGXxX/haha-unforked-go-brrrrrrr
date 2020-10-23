@@ -78,4 +78,5 @@
                 return (hasUpgrade("s", 21) && hasUpgrade("s", 11));
             },
        }
+    }
 })
