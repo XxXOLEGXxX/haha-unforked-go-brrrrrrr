@@ -98,13 +98,13 @@
         },
  31: {
             title: "But enough grinding, have at you!",
-            description: "Exponents all the upgrades based on unspent shenanigans",
+            description: "Exponents all the upgrades (excluding the first) based on unspent points and ''Vibing''.",
             cost: new Decimal(250),
             unlocked() { 
                 return (hasUpgrade("s", 23));
             },
             effect() {
-            let ret = new Decimal(1.42)
+            let ret = player.points.add(1).root(3).pow.(layers.s.upgrades[12].effect()).root(3);
             return ret;
             },
         },
