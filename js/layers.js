@@ -46,9 +46,9 @@
             },
             effect() {
                 let ret = player[this.layer].points.add(1).root(2);
-                if (hasUpgrade("s", 21)) ret = ret.times(layers.s.upgrades[21].effect())
-                if (hasUpgrade("s", 23)) ret = ret.times(layers.s.upgrades[23].effect())
-                if (hasUpgrade("s", 31)) ret = ret.times(layers.s.upgrades[31].effect())
+                if (hasUpgrade([this.layer], 21)) ret = ret.times(layers.s.upgrades[21].effect())
+                if (hasUpgrade([this.layer], 23)) ret = ret.times(layers.s.upgrades[23].effect())
+                if (hasUpgrade([this.layer], 31)) ret = ret.times(layers.s.upgrades[31].effect())
                 return ret;
             },
             effectDisplay() {
@@ -64,8 +64,8 @@
             },
             effect(){
             let ret = 1.01
-            if (hasUpgrade("s", 23)) = ret.times(layers.s.upgrades[23].effect())
-            if (hasUpgrade("s", 31)) = ret.times(layers.s.upgrades[31].effect())
+            if (hasUpgrade([this.layer], 23)) = ret.times(layers.s.upgrades[23].effect())
+            if (hasUpgrade([this.layer], 31)) = ret.times(layers.s.upgrades[31].effect())
             return ret;
             },
             effectDisplay(fx) { return "×" + format(fx) },
@@ -87,7 +87,7 @@
             },
             effect(){
             let ret = 1.01
-            if (hasUpgrade("s", 31)) = ret.times(layers.s.upgrades[31].effect())
+            if (hasUpgrade([this.layer], 31)) = ret.times(layers.s.upgrades[31].effect())
             return ret;
             },
             effectDisplay(fx) { return "×" + format(fx) },
