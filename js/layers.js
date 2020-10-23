@@ -46,7 +46,8 @@
             },
             effect() {
                 let ret = player[this.layer].points.add(1).root(2);
-                if (hasUpgrade(this.layer, 23)) ret = ret.pow(1.01)
+                if (hasUpgrade(this.layer, 21)) ret = ret.pow(1.01)
+                if (hasUpgrade(this.layer, 23)) ret = ret.pow(1,010100503341741585660644790642)
                 return ret;
             },
             effectDisplay() {
@@ -61,7 +62,7 @@
                 return (hasUpgrade("s", 12) && hasUpgrade([this.layer], 11));
             },
             effect() {
-                let ret = upgradeEffect(this.layer, 12).pow(1.01);
+                let ret = 1,01
                 if (hasUpgrade(this.layer, 23)) ret = ret.pow(1.01)
                 return ret;
             },
@@ -83,5 +84,6 @@
             unlocked() { 
                 return (hasUpgrade("s", 21) && hasUpgrade([this.layer], 11));
             },
+            effectDisplay(fx) { return "×" + format(fx) }
        }
 })
