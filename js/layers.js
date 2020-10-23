@@ -19,7 +19,7 @@
         exponent: 0.5,                          // "normal" prestige gain is (currency^exponent)
 
         gainMult() {                            // Returns your multiplier to your gain of the prestige resource
-            let mult = new Decimal(1)               // Factor in any bonuses multiplying gain here
+            let mult = new Decimal(1);
             if (hasUpgrade(this.layer, 12)) mult = mult.times(upgradeEffect(this.layer, 12))
             return mult
         },
@@ -46,7 +46,7 @@
                 return (hasUpgrade("s", 11) || hasUpgrade(this.layer, 11));
             },
             effect() {
-                let ret = getPointGen().add(1).root(2);
+                let ret = getPointGen().add(1).root(10);
                 return ret;
             },
             effectDisplay() {
