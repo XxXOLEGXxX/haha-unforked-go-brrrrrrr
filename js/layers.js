@@ -1,12 +1,12 @@
- addLayer("p", {
+ addLayer("s", {
         startData() { return {                  // startData is a function that returns default data for a layer. 
             unlocked: true,                    // You can add more variables here to add them to your layer.
             points: new Decimal(1),             // "points" is the internal name for the main resource of the layer.
         }},
 
-        name: "plot",
+        name: "shenanigans shenanigans",
         color: "#420420",                       // The color for this layer, which affects many elements
-        resource: "plot WORK DAMN IT",            // The name of this layer's main prestige resource
+        resource: "shenanigans",            // The name of this layer's main prestige resource
         row: 0,                                 // The row this layer is on (0 is the first row)
 
         baseResource: "shenanigans",                 // The name of the resource your prestige gain is based on
@@ -26,4 +26,15 @@
         },
 
         layerShown() {return true},             // Returns a bool for if this layer's node should be visible in the tree.
+
+    upgrades: {
+        rows: 1,
+        cols: 1,
+        11: {
+            title: "Every 60 seconds in real life a minute passes.",
+            description: "Speeds up your unknown plot energy gain.",
+            effect(gain = new Decimal(1)):,
+        }
+        etc
+    }
 })
