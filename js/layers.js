@@ -63,7 +63,7 @@
             },
             effectDisplay() {
                 if (hasUpgrade(this.layer, 23))
-                    then {return format"^1,0101"};
+                    then return format"^1,0101"};
                 else return format "^1,01";
             }
         },
