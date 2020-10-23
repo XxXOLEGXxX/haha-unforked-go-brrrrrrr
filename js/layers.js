@@ -36,6 +36,5 @@
             description: "Speeds up your unknown plot energy gain.",
             cost: new Decimal(1),
        }
-        etc
     }
 })
