@@ -4,7 +4,8 @@
             points: new Decimal(0),             // "points" is the internal name for the main resource of the layer.
         }},
 
-        color: "#FE0102",                       // The color for this layer, which affects many elements
+        name: "plot" 
+        color: "#420420",                       // The color for this layer, which affects many elements
         resource: "plot shenanigans",            // The name of this layer's main prestige resource
         row: 0,                                 // The row this layer is on (0 is the first row)
 
