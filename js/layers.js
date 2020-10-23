@@ -36,7 +36,7 @@
             description: "Speeds up your unknown plot energy gain.",
             cost: new Decimal(1),
             effect() {
-            var gain = new Decimal(69)
+            gain = gain.add(69)
             },
        }
     }
