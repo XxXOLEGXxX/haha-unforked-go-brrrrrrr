@@ -60,11 +60,11 @@
                 return (hasUpgrade("s", 12) && hasUpgrade([this.layer], 11));
             },
             effect() {
-                let ret = upgradeEffect("s", 21) ^ 1.01
+                let ret = upgradeEffect("s", 21) ^ 1.01;
                 return ret;
             },
             effectDisplay() {
-                return "^" + format(this.effect())
+                return format("^" + this.effect())
             }
         },
         22: {
