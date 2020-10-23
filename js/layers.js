@@ -46,8 +46,8 @@
             },
             effect() {
                 let ret = player[this.layer].points.add(1).root(2);
-                if (hasUpgrade(this.layer, 21)) ret = ret.pow(1.01)
-                if (hasUpgrade(this.layer, 23)) ret = ret.pow(1,010100503341741585660644790642)
+                if (hasUpgrade("s", 21)) ret = ret.pow(1.01)
+                if (hasUpgrade("s", 23)) ret = ret.pow(1,010100503341741585660644790642)
                 return ret;
             },
             effectDisplay() {
