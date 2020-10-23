@@ -31,7 +31,7 @@
 
     upgrades: {
         rows: 2,
-        cols: 2,
+        cols: 3,
         11: {
             title: "Every 60 seconds in real life a minute passes.",
             description: "Boosts your plot gain by ALOT.",
@@ -57,7 +57,7 @@
             description: "no.",
             cost: new Decimal(585447),
             unlocked() {
-                return (hasUpgrade("s", 12) || hasUpgrade(this.layer, 12));
+                return (hasUpgrade("s", 12) || hasUpgrade(this.layer, 11));
             },
         },
         22: {
@@ -65,14 +65,14 @@
             description: "no u.",
             cost: new Decimal(757),
             unlocked() {
-                return (hasUpgrade("s", 12) || hasUpgrade(this.layer, 12));
+                return (hasUpgrade("s", 12) || hasUpgrade(this.layer, 11));
         },
         23: {
             title: "YOU KNOW THE RULES.",
             description: "AND SO DO I.",
             cost: new Decimal(420),
             unlocked() {
-                return (hasUpgrade("s", 12) || hasUpgrade(this.layer, 12));
+                return (hasUpgrade("s", 12) || hasUpgrade(this.layer, 11));
         },
     }
 })
