@@ -64,7 +64,7 @@
                 return ret;
             },
             effectDisplay() {
-                return format" ^ " + (this.effect());
+                return format(this.effect()) + "^";
             }
         },
         22: {
