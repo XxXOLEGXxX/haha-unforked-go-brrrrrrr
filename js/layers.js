@@ -33,7 +33,6 @@ addLayer("apt", {
             description: "Increases your anti-planck time generation exponentially, based on your anti-planck times.",
             effect(): mult = new Decimal(1^1.1),
         }
-        etc
     }
 })
 
