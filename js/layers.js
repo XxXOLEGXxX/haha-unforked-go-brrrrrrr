@@ -27,8 +27,8 @@ addLayer("apt", {
         layerShown(){return true},
     },
     upgrades: {
-            rows: 2,
-            cols: 3,
+            rows: 1,
+            cols: 1,
             11: {
                 title: "Time Acceleration",
                 description: "Gain 1 more anti-planck time every second.",
