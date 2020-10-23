@@ -57,7 +57,7 @@
             description: "no.",
             cost: new Decimal(585447),
             unlocked() {
-            player.p.points = 20 || player.p.points > 20
+            return (player[this.layer].points.min(20))
             },
         },
         22: {
