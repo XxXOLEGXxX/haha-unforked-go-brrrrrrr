@@ -42,13 +42,16 @@
             title: "Vibing.",
             description: "Boosts your plot gain by unspent shenanigans.",
             cost: new Decimal(10),
-            unlocked() { return hasUpgrade(this.layer, 11) },
+            unlocked() { 
+                return (hasUpgrade("s", 11) || hasUpgrade(this.layer, 11));
+            },
             effect() {
                 let ret = getPointGen().add(1).root(2);
                 return ret;
             },
             effectDisplay() {
                 return format(this.effect())+"x";
+            }
         },
     }
 })
