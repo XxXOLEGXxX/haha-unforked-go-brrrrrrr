@@ -61,7 +61,7 @@
                 return (hasUpgrade("s", 12) && hasUpgrade([this.layer], 11));
             },
             effect() {
-                let ret = upgradeEffect([this.layer], 12).pow(1.01);
+                let ret = upgradeEffect(this.layer, 12).pow(1.01);
                 if (hasUpgrade(this.layer, 23)) ret = ret.pow(1.01)
                 return ret;
             },
