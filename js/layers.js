@@ -57,7 +57,7 @@
             description: "Boosts your plot gain by ALOT.",
             cost: new Decimal(1),
             unlocked() {
-            return (player[this.layer].points > 20)},
+            return (player.p.points > 20)},
         },
     }
 })
