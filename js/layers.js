@@ -2,9 +2,9 @@
         startData() { return {                  // startData is a function that returns default data for a layer. 
             unlocked: true,                    // You can add more variables here to add them to your layer.
             points: new Decimal(1),             // "points" is the internal name for the main resource of the layer.
-            update(1) {
+            update(diff) {
 		 if (hasUpgrade("s", 32)) {
-                 generatePoints("s", 1)
+                 generatePoints("s", diff)
             }
         },
         }},
