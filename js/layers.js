@@ -2,7 +2,6 @@
         startData() { return {                  // startData is a function that returns default data for a layer. 
             unlocked: true,                    // You can add more variables here to add them to your layer.
             points: new Decimal(1),             // "points" is the internal name for the main resource of the layer.
-            update(diff)
         }},
 
         name: "shenanigans",
@@ -116,6 +115,7 @@
             unlocked() { 
                 return hasUpgrade([this.layer], 31);
             effect() {
+            update(diff)
             addPoints("s", diff)
             },
             },
