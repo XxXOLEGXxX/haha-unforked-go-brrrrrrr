@@ -109,7 +109,7 @@
             },
         },
         32: {
-            title: "The finale of grind.",
+            title: "El finale of grind.",
             description: "You gain 10% of shenanigans per second, as if you were doing fast resets.",
             cost: new Decimal(1),
             unlocked() { 
@@ -118,7 +118,7 @@
         },
     },
 	update(diff) {
-		if (hasUpgrade("s", 32) && tmp.gainExp !== undefined) {
+		if (hasUpgrade("s", 32)) {
 			let delta = tmp.resetGain["s"].mul(100).mul(diff)
 			addPoints("s", delta)
 		}
