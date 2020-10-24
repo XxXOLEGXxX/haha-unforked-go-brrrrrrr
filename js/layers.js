@@ -114,17 +114,12 @@
             description: "Tetrates the upgrade left to it by 1.0420.",
             cost: new Decimal(400),
             unlocked() { 
-                return hasUpgrade([this.layer], 31);
+                return hasUpgrade([this.layer], 23);
+	    },
             effect() {
                 let ret = new Decimal(1.042)
                 return ret;
             },
         },
     },
-	update(diff) {
-		if (hasUpgrade("s", 69) && tmp.gainExp !== undefined) {
-			let delta = tmp.resetGain["s"].mul(100).mul(diff)
-			addPoints("s", delta)
-		}
-	},
 })
