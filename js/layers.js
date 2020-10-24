@@ -111,7 +111,7 @@
         },
         32: {
             title: "Tetrate-inator.",
-            description: "Tetrates the upgrade left to it by 1.0420.",
+            description: "Tetrates the upgrade left to it by 1.420.",
             cost: new Decimal(400),
             unlocked() { 
                 return hasUpgrade([this.layer], 23);
