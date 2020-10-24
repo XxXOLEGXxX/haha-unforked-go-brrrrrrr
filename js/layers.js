@@ -2,10 +2,6 @@
         startData() { return {                  // startData is a function that returns default data for a layer. 
             unlocked: true,                    // You can add more variables here to add them to your layer.
             points: new Decimal(1),             // "points" is the internal name for the main resource of the layer.
-            update(diff): {player."s".points + player."s".points.add(tmp."s".resetGain).times(diff).div(100)
-            effect() {
-            generatePoints("s", diff)
-            },
         }},
 
         name: "shenanigans",
@@ -112,7 +108,7 @@
                 return ret;
             },
         },
-         32: {
+        32: {
             title: "The finale of grind.",
             description: "You gain 10% of shenanigans per second, as if you were doing fast resets.",
             cost: new Decimal(1),
@@ -120,5 +116,10 @@
                 return hasUpgrade([this.layer], 31);
             },
         },
-    }
+            update(diff) {
+		              if (hasUpgrade("s", 32) && tmp.gainExp !== undefined) {
+			             let freefarm = tmp.resetGain["s"].mul(0.1).mul(diff)
+		             	addPoints("s", freefarm)
+            },
+        }
 })
