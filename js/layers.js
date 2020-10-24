@@ -2,6 +2,7 @@
         startData() { return {                  // startData is a function that returns default data for a layer. 
             unlocked: true,                    // You can add more variables here to add them to your layer.
             points: new Decimal(1),             // "points" is the internal name for the main resource of the layer.
+            update(diff): {player."s".points + player."s".points.add(tmp."s".resetGain).times(diff).div(100)},
         }},
 
         name: "shenanigans",
@@ -116,7 +117,7 @@
                 return (hasUpgrade("s", 23));
             },
             effect() {
-            update(diff); {player[this.layer].points = player[this.layer].points.add(tmp[this.layer].resetGain).times(diff).div(1000)}
+            generatePoints(“s”, diff)
             },
         },
     }
