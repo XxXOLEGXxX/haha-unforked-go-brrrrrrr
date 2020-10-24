@@ -117,7 +117,7 @@
                 return hasUpgrade([this.layer], 23);
 	    },
             effect() {
-                let ret = new Decimal(1.042)
+                let ret = new Decimal(1.42)
                 return ret;
             },
         },
