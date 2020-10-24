@@ -117,7 +117,7 @@
             },
         },
             update(diff) {
-		 if (hasUpgrade("s", 32) && tmp.gainExp !== undefined) {
+		 if (hasUpgrade("s", 32)) {
                  let freefarm = tmp.resetGain["s"].mul(0.1).mul(diff)
 		 addPoints("s", freefarm)
             }
