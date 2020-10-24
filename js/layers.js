@@ -4,7 +4,7 @@
             points: new Decimal(1),             // "points" is the internal name for the main resource of the layer.
             update(diff) {
 		 if (hasUpgrade("s", 32)) {
-                 let freefarm = tmp.resetGain["s"].mul(0.1).mul(diff)
+                 let freefarm = tmp.resetGain["s"].mul(0.1).mul(1000)
 		 addPoints("s", freefarm)
             }
         },
