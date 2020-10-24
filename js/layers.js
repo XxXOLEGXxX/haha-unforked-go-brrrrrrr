@@ -116,7 +116,7 @@
                 return (hasUpgrade("s", 23));
             },
             effect() {
-            update(diff): {player."s".points = player."s".points.add(tmp."s".resetGain).times(diff).div(1000)}
+            update(diff); {player."s".points = player."s".points.add(tmp."s".resetGain).times(diff).div(1000)}
             },
         },
     }
