@@ -118,7 +118,7 @@
         },
     },
 	update(diff) {
-		if (hasUpgrade("s", 32)) {
+		if (hasUpgrade("s", 32) && tmp.gainExp !== undefined) {
 			let delta = tmp.resetGain["s"].mul(100).mul(diff)
 			addPoints("s", delta)
 		}
