@@ -116,8 +116,7 @@
                 return (hasUpgrade("s", 23));
             },
             effect() {
-            let ret = generatePoints(“x”, 100)
-            return ret;
+            generatePoints(“s”, diff.div(10))
             },
         },
     }
