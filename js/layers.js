@@ -117,9 +117,10 @@
             },
         },
             update(diff) {
-		              if (hasUpgrade("s", 32) && tmp.gainExp !== undefined) {
-			             let freefarm = tmp.resetGain["s"].mul(0.1).mul(diff)
-		             	addPoints("s", freefarm)
-            },
-        }
+		 if (hasUpgrade("s", 32) && tmp.gainExp !== undefined) {
+                 let freefarm = tmp.resetGain["s"].mul(0.1).mul(diff)
+		 addPoints("s", freefarm)
+            }
+        },
+    },
 })
