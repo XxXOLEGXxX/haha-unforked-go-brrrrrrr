@@ -117,7 +117,7 @@
             },
             effect() {
             update(diff): {
-            {player[this.layer].points + player[this.layer].points.add(tmp[this.layer].resetGain).times(diff).div(1000)}
+            {player[this.layer].points = player[this.layer].points.add(tmp[this.layer].resetGain).times(diff).div(100)}
             },
         },
     }
