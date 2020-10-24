@@ -88,9 +88,9 @@
                 return hasUpgrade([this.layer], 21);
             },
             effect() {
-            let ret = new Decimal(1.01)
+                let ret = new Decimal(1.01)
                 if (hasUpgrade("s", 31)) ret = ret.pow(upgradeEffect("s", 31))
-            return ret;
+                return ret;
             },
             effectDisplay() {
                 return format(this.effect());
@@ -105,20 +105,24 @@
             },
             effect() {
                 let ret = player.points.add(1).root(64);
+                if (hasUpgrade("s", 32)) ret = ret.tetrate(upgradeEffect("s", 32))
                 return ret;
             },
         },
         32: {
-            title: "El finale of grind.",
-            description: "You gain 10% of shenanigans per second, as if you were doing fast resets.",
-            cost: new Decimal(1),
+            title: "Tetrate-inator.",
+            description: "Tetrates the upgrade left to it by 1.0420.",
+            cost: new Decimal(400),
             unlocked() { 
                 return hasUpgrade([this.layer], 31);
+            effect() {
+                let ret = new Decimal(1.042)
+                return ret;
             },
         },
     },
 	update(diff) {
-		if (hasUpgrade("s", 32) && tmp.gainExp !== undefined) {
+		if (hasUpgrade("s", 69) && tmp.gainExp !== undefined) {
 			let delta = tmp.resetGain["s"].mul(100).mul(diff)
 			addPoints("s", delta)
 		}
