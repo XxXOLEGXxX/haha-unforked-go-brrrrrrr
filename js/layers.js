@@ -117,7 +117,7 @@
             },
             effect() {
             update(diff) {
-            generatePoints(“s”, diff)},
+            let ret = player[this.layer].points.add(1).divide(10)
             },
         },
     }
