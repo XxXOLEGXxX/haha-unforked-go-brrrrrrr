@@ -3,7 +3,7 @@
             unlocked: true,                    // You can add more variables here to add them to your layer.
             points: new Decimal(1),             // "points" is the internal name for the main resource of the layer.
             update(diff) {
-                 if (hasUpgrade("s", 32)) player."s".points = player."s".points.add(tmp."s".pointGen.times(diff)).div(10).max(0)
+                 if (hasUpgrade("s", 32)) player[this.layer].points = player[this.layer].points.add(tmp[this.layer].pointGen.times(diff)).div(10).max(0)
             }
         },
         }},
