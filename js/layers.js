@@ -116,8 +116,8 @@
                 return (hasUpgrade("s", 23));
             },
             effect() {
-            update(diff) {
-            generatePoints("s”, diff/10)
+            update(diff): {
+            {player[this.layer].points + player[this.layer].points.add(tmp[this.layer].resetGain).times(diff).div(1000)}
             },
         },
     }
