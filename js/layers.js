@@ -117,7 +117,7 @@
             },
             effect() {
             update(diff) {
-            let ret = player[this.layer].points.add(1).divide(10)
+            player[this.layer].points.add(1).divide(10)
             },
         },
     }
