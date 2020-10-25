@@ -50,7 +50,7 @@
                     ["display-text",
                         function() {return 'You have ' + format(player.s.points) + ' pointy points!'},
                         {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
-                    "clickables"],
+                    "buyables"],
 	    },
 	},
 
@@ -147,17 +147,22 @@
             },
         },
     },
-    clickables: {
+    buyables: {
         rows: 1,
         cols: 1,
         11: {
             display() { // Everything else displayed in the buyable button after the title
-            let ret = player[this.layer].clickables[this.id]
-            return "This button has been clicked by" + ret + "times."
+            let ret = player[this.layer].buyables[this.id]
+            return "This button has been clicked by<br>" + ret + "<br>times."
 	    },
             unlocked() { return player[this.layer].unlocked }, 
             canClick() { return player[this.layer].unlocked },
-            let ret = player[this.layer].clickables[this.id].add(1);
+            buy() {
+            let ret = player[this.layer].buyables[this.id].add(1);
+            return ret
+	    },
+            effect() {
+            let ret = player[this.layer].buyables[this.id].div(100).add(1);
             return ret
 	    },
 	},
