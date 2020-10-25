@@ -51,7 +51,7 @@
                     ["raw-html", function() {return "<button onclick='console.log(`yeet`)'>'HI'</button>"}],
                     ["display-text",
                         function() {return 'You have ' + format(player.s.points) + ' pointy points!'},
-                        {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}]
+                        {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
                     "buyables"],
 	    },
 	},
