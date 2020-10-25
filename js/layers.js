@@ -2,7 +2,7 @@ addLayer("s", {
         startData() { return {
             unlocked: true,
             points: new Decimal(0),
-            degrade: new Decimal(0),
+            upgradeTime: new Decimal(0),
         };},
 
         name: "shenanigans",
@@ -83,8 +83,8 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            let ret = new Decimal(5)
-            return ret.sub(data.degrade.div(15))
+            let ret = new Decimal(5).sub(data.upgradeTime.div(15))
+            return ret
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
