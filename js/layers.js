@@ -152,7 +152,7 @@
         cols: 1,
         11: {
             display() { // Everything else displayed in the buyable button after the title
-            let amount = player[this.layer].clickables
+            let amount = player[this.layer].clickables[this.id]
             return "This button has been clicked by" + amount + "times."
 	    },
             unlocked() { return player[this.layer].unlocked },
