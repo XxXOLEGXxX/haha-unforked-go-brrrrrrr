@@ -138,7 +138,7 @@
             },
             effect() {
                 let rero = 64
-                if (hasUpgrade("s", 22)) rero = rero.div(2)
+                if (hasUpgrade("s", 22)) rero = rero.mul(0.5)
                 let ret = player.points.add(1).root(rero);
                 if (hasUpgrade("s", 32)) ret = ret.tetrate(upgradeEffect("s", 32))
                 return ret;
