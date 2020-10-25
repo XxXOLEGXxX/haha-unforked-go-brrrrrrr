@@ -87,6 +87,7 @@
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
+            let ret = {}
             return new Decimal(5).sub(upgradeDegrader.div(15))
 	    },
             effectDisplay() {
