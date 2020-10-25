@@ -204,9 +204,7 @@ addLayer("s", {
 	},
     },
             update(diff)
-            if(hasUpgrade("s", 13)) {
-                upgradeDegrader = upgradeDegrader.add(diff);
-	    },
+            if(hasUpgrade("s", 13)) upgradeDegrader = upgradeDegrader.add(diff);,
 	hotkeys: [
 		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer); } },
 	],
