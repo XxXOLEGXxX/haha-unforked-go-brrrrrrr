@@ -161,7 +161,7 @@
             return ret
 	    },
             effect () {
-            let ret = player.s.clickables.11.div(100).add(1);
+            let ret = player.s.clickables.(11).div(100).add(1);
             return ret;
 	    },
 	},
