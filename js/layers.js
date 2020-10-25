@@ -161,7 +161,7 @@
             return ret
 	    },
             effect () {
-            let ret = player.s.clickables[this.id].div(100).add(1);
+            let ret = (player[this.layer].clickables[this.id]).div(100).add(1);
             return ret;
 	    },
 	},
