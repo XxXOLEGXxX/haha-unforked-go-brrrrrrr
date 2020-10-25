@@ -1,13 +1,14 @@
-addLayer("s", {
-        startData() { return {
-            unlocked: true,
-            points: new Decimal(0),
-            upgradeDegrader: new Decimal(0),
             update(diff){
             if(hasUpgrade("s", 13)) {
                 upgradeDegrader = upgradeDegrader.add(diff);
 	    }
 	    },
+
+addLayer("s", {
+        startData() { return {
+            unlocked: true,
+            points: new Decimal(0),
+            upgradeDegrader: new Decimal(0),
         };},
 
         name: "shenanigans",
