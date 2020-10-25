@@ -164,7 +164,7 @@
             display() { // Everything else displayed in the buyable button after the title
                 let data = tmp.buyables[this.layer][this.id]
                 return "Amount: " + player[this.layer].buyables[this.id] + "\n\
-                Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + format(data.effect) + " times."
+                Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + format(this.effect()) + " times."
 	    },
 	},
     },
