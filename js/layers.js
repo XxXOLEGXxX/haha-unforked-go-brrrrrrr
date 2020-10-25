@@ -69,7 +69,7 @@
                 return ret;
             },
             effectDisplay() {
-                return format(this.effect())+"x";
+                return format(this.effect()) + "x";
             },
         },
         13: {
@@ -102,7 +102,7 @@
                 return ret;
             },
             effectDisplay() {
-                return format(this.effect());
+                return "^" + format(this.effect());
             },
         },
         22: {
@@ -126,7 +126,7 @@
                 return ret;
             },
             effectDisplay() {
-                return format(this.effect());
+                return "^" + format(this.effect());
             },
         },
         31: {
@@ -154,6 +154,9 @@
             effect() {
                 let ret = Decimal.tetrate(1.42)
                 return ret;
+            },
+            effectDisplay() {
+                return "^^1.42");
             },
         },
         33: {
@@ -190,7 +193,6 @@
 	    display() { // Everything else displayed in the buyable button after the title
                     let ret = {}
 		    return "Amount " + player[this.layer].buyables[this.id] + "\n\
-		    Cost: Boosts the finished work's effect.\n\
 		    Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x times."
 	    },
 	},
