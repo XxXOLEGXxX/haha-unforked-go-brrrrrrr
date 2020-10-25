@@ -39,7 +39,7 @@
                     ["display-text",
                         function() {return 'I have ' + format(player.points) + ' pointy points!'},
                         {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
-                    "h-line", "milestones", "blank", "upgrades", "challenges"],
+                    "upgrades", "milestones"],
 	    },
             "Impatience": {
                 buttonStyle() {return  {'border-color': 'red', 'color': 'red'}},
