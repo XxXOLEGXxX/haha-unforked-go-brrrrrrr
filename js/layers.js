@@ -140,7 +140,7 @@
                 let ret = {}
                 if (hasUpgrade("s", 22)) ret = player.points.add(1).root(32)
 		else ret = player.points.add(1).root(64)
-                if (hasUpgrade("s", 32)) ret = ret.tetrate(upgradeEffect("s", 32))
+                if (hasUpgrade("s", 32)) ret = ret.tetrate(1.42)
                 return ret;
             },
         },
