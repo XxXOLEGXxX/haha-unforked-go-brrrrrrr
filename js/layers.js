@@ -34,7 +34,6 @@
                 content:
                     ["main-display",
                     "prestige-button",
-
                     ["blank", "5px"], // Height
                     ["raw-html", function() {return "<button onclick='console.log(`yeet`)'>'HI'</button>"}],
                     ["display-text",
@@ -46,7 +45,6 @@
                 buttonStyle() {return  {'border-color': 'red', 'color': 'red'}},
                 content:
                     ["main-display",
-                    "prestige-button",
                     ["blank", "5px"], // Height
                     ["raw-html", function() {return "<button onclick='console.log(`yeet`)'>'HI'</button>"}],
                     ["display-text",
