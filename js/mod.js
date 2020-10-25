@@ -11,8 +11,8 @@ let modInfo = {
 
 // Set your version in num and name
 let VERSION = {
-	num: "0",
-	name: "why are you playing this?",
+	num: "0.1",
+	name: "And we've been waiting for this?",
 }
 
 // If you add new functions anywhere inside of a layer, and those functions have an effect when called, add them here.
@@ -40,6 +40,7 @@ function getPointGen() {
 	let gain = new Decimal(0.01666666666666666666666666666667).mul(buyableEffect("s", 11))
         if (hasUpgrade("s", 11)) gain = gain.times(new Decimal(60));
         if (hasUpgrade("s", 12)) gain = gain.times(upgradeEffect("s", 12))
+        if (hasUpgrade("s", 13) && upgradeEffect("s", 13) > new Decimal(1)) gain = gain.times(upgradeEffect("s", 13))
 	return gain
 }
 
