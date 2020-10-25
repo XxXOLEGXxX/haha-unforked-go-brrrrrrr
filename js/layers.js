@@ -27,7 +27,7 @@ addLayer("s", {
 
         update(diff){
             if(hasUpgrade([this.layer],13)) {
-                upgradeTime = upgradeTime.add(diff)
+                upgradeDegrader = upgradeDegrader.add(diff)
             }
 	},
 
@@ -78,15 +78,15 @@ addLayer("s", {
             },
         },
         13: {
-            title: "wip.",
-            description: "wip.",
+            title: "Degrading Upgrade.",
+            description: "Boosts your plot gain by 5x and decreases linearly (caps at 1x).",
             cost: new Decimal(2200),
             unlocked(){ 
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            let ret = 5
-            return ret.sub(upgradeDegrader.div(15));
+            let ret = new Decimal(5)
+            return ret.sub(upgradeDegrader.div(15))
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
