@@ -83,6 +83,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
+            if (player[this.layer].upgradeTime > 1)
             return new Decimal(5).sub(player[this.layer].upgradeTime.div(15));
             },
             effectDisplay() {
