@@ -5,12 +5,6 @@ addLayer("s", {
             upgradeDegrader: new Decimal(0),
         }},
 
-    update(diff) {
-        if(hasUpgrade("s", 13)) {
-            upgradeDegrader = upgradeDegrader.add(diff)
-        }
-    },
-
         name: "shenanigans",
         color: "#420420",
         resource: "shenanigans",
@@ -85,7 +79,10 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            return Decimal(5).sub(upgradeDegrader.div(15))
+            update(diff) {
+            let upgradeDegrader = upgradeDegrader.add(diff)
+            return new Decimal(5).sub(upgradeDegrader.div(15))
+	    },
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
