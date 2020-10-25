@@ -48,7 +48,7 @@
 
     upgrades: {
         rows: 3,
-        cols: 3,
+        cols: 4,
         11: {
             title: "Every 60 seconds in real life a minute passes.",
             description: "Boosts your plot gain by ALOT.",
@@ -76,11 +76,17 @@
             title: "wip.",
             description: "wip.",
             cost: new Decimal(1e9001),
+            unlocked() { 
+                return hasUpgrade([this.layer], 22);
+            },
         },
         14: {
             title: "wip.",
             description: "wip.",
             cost: new Decimal(1e9001),
+            unlocked() { 
+                return hasUpgrade([this.layer], 22);
+            },
         },
         21: {
             title: "Tiny desk exponent.",
@@ -154,11 +160,17 @@
             title: "wip.",
             description: "wip.",
             cost: new Decimal(1e9001),
+            unlocked() { 
+                return hasUpgrade([this.layer], 22);
+            },
         },
         34: {
             title: "wip.",
             description: "wip.",
             cost: new Decimal(1e9001),
+            unlocked() { 
+                return hasUpgrade([this.layer], 22);
+            },
         },
     },
     buyables: {
