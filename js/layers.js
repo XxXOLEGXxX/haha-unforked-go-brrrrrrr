@@ -27,7 +27,7 @@ addLayer("s", {
 
         update(diff){
             if(hasUpgrade(this.layer, 13)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
-            if(player[this.layer].upgradeTime = new Decimal(1)) player[this.layer].upgradeTime = 60
+            if(player[this.layer].upgradeTime.gte(60)) player[this.layer].upgradeTime = 60
 	},
 
         layerShown() {return true;},
