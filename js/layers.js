@@ -156,7 +156,7 @@
             return "This button has been clicked by<br>" + ret + "<br>times."
 	    },
             unlocked() { return player[this.layer].unlocked }, 
-            canClick() { return player[this.layer].unlocked },
+            canAfford() { return player[this.layer].unlocked },
             buy() {
             let ret = player[this.layer].buyables[this.id].add(1);
             return ret
