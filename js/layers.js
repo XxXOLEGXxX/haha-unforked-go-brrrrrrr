@@ -26,7 +26,7 @@ addLayer("s", {
         },
 
         update(diff){
-            if(hasUpgrade([this.layer], 13)) {upgradeTime = upgradeTime.add(diff)}
+            if(hasUpgrade([this.layer], 13)) upgradeTime = upgradeTime.add(diff)
 	},
 
         layerShown() {return true;},
@@ -83,8 +83,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            let ret = new Decimal(5).sub(data.upgradeTime.div(15))
-            return ret
+            return new Decimal(5).sub(data.upgradeTime.div(15))
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
