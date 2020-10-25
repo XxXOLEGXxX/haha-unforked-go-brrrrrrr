@@ -2,7 +2,7 @@ addLayer("s", {
         startData() { return {
             unlocked: true,
             points: new Decimal(0),
-            upgradeDegrader: new Decimal(0),
+            degrade: new Decimal(0),
         };},
 
         name: "shenanigans",
@@ -26,9 +26,7 @@ addLayer("s", {
         },
 
         update(diff){
-            if(hasUpgrade([this.layer],13)) {
-                upgradeDegrader = upgradeDegrader.add(diff)
-            }
+            if(hasUpgrade([this.layer], 13)) {player[this.layer].degrade+= diff}
 	},
 
         layerShown() {return true;},
@@ -86,7 +84,7 @@ addLayer("s", {
             },
             effect() {
             let ret = new Decimal(5)
-            return ret.sub(upgradeDegrader.div(15))
+            return ret.sub(data.degrade.div(15))
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
