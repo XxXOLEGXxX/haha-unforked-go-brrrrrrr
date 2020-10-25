@@ -41,6 +41,7 @@
                         {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
                     "h-line", "milestones", "blank", "upgrades", "challenges"],
 	    },
+	},
 
     upgrades: {
         rows: 3,
