@@ -162,7 +162,7 @@
 	    },
             effect () {
             let ret = player[this.layer].clickables[this.id].add(1);
-            return ret;
+            return ret
 	    },
 	},
     },
