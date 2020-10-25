@@ -27,7 +27,6 @@ addLayer("s", {
 
         update(diff){
             if(hasUpgrade(this.layer, 13)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
-            if(player[this.layer].upgradeTime.gte(60)) player[this.layer].upgradeTime = 60
 	},
 
         layerShown() {return true;},
@@ -84,7 +83,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            return new Decimal(5).sub(player[this.layer].upgradeTime.div(1));
+            return new Decimal(5).sub(player[this.layer].upgradeTime.div(15));
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
