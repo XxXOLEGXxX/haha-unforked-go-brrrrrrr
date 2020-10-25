@@ -8,7 +8,7 @@
     update(diff) {
         if(hasUpgrade("s", 13)) {
             upgradeDegrader = upgradeDegrader.add(diff)
-        },
+        }
     },
 
         name: "shenanigans",
@@ -87,8 +87,8 @@
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            let ret = {}
-            return new Decimal(5).sub(player.upgradeDegrader.div(15))
+            let ret = new Decimal(5)
+            return ret.sub(player.upgradeDegrader.div(15))
 	    },
             effectDisplay() {
                 return format(this.effect()) + "x";
