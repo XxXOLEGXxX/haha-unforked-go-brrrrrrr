@@ -3,9 +3,11 @@ addLayer("s", {
             unlocked: true,
             points: new Decimal(0),
             upgradeDegrader: new Decimal(0),
-            update(diff) 
-            let upgradeDegrader = upgradeDegrader.add(diff)
-            return new Decimal(5).sub(upgradeDegrader.div(15))
+            update(diff) {
+            if(hasUpgrade("s", 13)) {
+                upgradeTime = upgradeTime.add(diff)
+	    }
+	    },
         }},
 
         name: "shenanigans",
