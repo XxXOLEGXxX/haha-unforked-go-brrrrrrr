@@ -47,6 +47,7 @@ prestigeButtonText(){
                 let doritoslmao = new Decimal(2)
                 let nextAt = "Next at " + formatWhole(gain.pow(doritoslmao)) + " plots"
                 return start + nextAt
+                },
         },
 	    },
             "Impatience": {
