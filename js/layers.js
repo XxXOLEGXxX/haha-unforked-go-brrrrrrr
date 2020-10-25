@@ -158,13 +158,14 @@
             player[this.layer].buyables[this.id] = player[this.layer].buyables[this.id].add(1)
 	    },
             effect() {
-            let eff = player[this.layer].buyables[this.id].div(100).add(1);
+            let eff = {}
+            let effect.first = player[this.layer].buyables[this.id].div(100).add(1);
             return eff
 	    },
             display() { // Everything else displayed in the buyable button after the title
                 let data = tmp[this.layer].buyables[this.id]
                 return "Amount: " + player[this.layer].buyables[this.id] + "\n\
-                Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + format(this.eff) + " times."
+                Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + format(data.effect.first) + " times."
 	    },
 	},
     },
