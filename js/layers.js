@@ -164,8 +164,7 @@
 	    display() { // Everything else displayed in the buyable button after the title
 		    let data = tmp.buyables[this.layer][this.id]
 		    return "Level " + player[this.layer].buyables[this.id] + "\n\
-		    Cost: " + format(data.cost) + " coins\n\
-		    Boosts the finished work's effect.\n\
+		    Cost: Boosts the finished work's effect.\n\
 		    Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + format(data.effect) "times."
 		},
 	},
