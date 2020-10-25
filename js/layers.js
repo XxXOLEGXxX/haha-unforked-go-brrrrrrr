@@ -85,7 +85,7 @@ addLayer("s", {
             },
             effect() {
             let ret = 5
-            return ret.sub(upgradeDegrader.div(15);
+            return ret.sub(upgradeDegrader.div(15));
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
