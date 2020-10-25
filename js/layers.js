@@ -151,12 +151,16 @@
         rows: 1,
         cols: 1,
         11: {
-            display() {return "Blah"},
+            display() { // Everything else displayed in the buyable button after the title
+            let amount = player[this.layer].clickables
+            return "This button has been clicked by" + amount + "times."
+	    },
             unlocked() { return player[this.layer].unlocked },
             effect () {
-            let annoying = new Decimal(1.01);
+            let annoying = new Decimal(1).add((player[this.layer].clickables).div(100));
             return annoying
-        },
+	    },
+	},
     },
 	hotkeys: [
 		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer) } },
