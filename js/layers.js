@@ -2,16 +2,13 @@
         startData() { return {                  // startData is a function that returns default data for a layer. 
             unlocked: true,                    // You can add more variables here to add them to your layer.
             points: new Decimal(0),             // "points" is the internal name for the main resource of the layer.
+            upgradeDegrader: new Decimal(0)
         }},
 
     update(diff) {
-        let decreasingUpgrade = new Decimal(5)
-        if (hasUpgrade("s", 13)) {
-        let decreasingUpgrade = 5
-	if(decreasingUpgrade.gt(1)) decreasingUpgrade = decreasingUpgrade.sub(new Decimal(0.99).mul(diff)).max(0)
-        else decreasingUpgrade = new Decimal(1)
-        return decreasingUpgrade
-	}
+        if(hasUpgrade("s", 13)) {
+            upgradeDegrader = upgradeDegrader.add(diff)
+        }
     },
 
         name: "shenanigans",
@@ -85,13 +82,12 @@
         13: {
             title: "wip.",
             description: "wip.",
-            cost: new Decimal(1200),
+            cost: new Decimal(2200),
             unlocked() { 
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-                let ret = new Decimal(5).div(player.decreasingUpgrade);
-                return ret;
+            return new Decimal(5).sub(upgradeDegrader.div(15))
 	    },
             effectDisplay() {
                 return format(this.effect()) + "x";
