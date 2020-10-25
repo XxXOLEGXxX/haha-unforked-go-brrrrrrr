@@ -78,7 +78,7 @@ addLayer("s", {
         13: {
             title: "Degrading Upgrade.",
             description: "Boosts your plot gain by 5x and decreases linearly (caps at 1x).",
-            cost: new Decimal(2200),
+            cost: new Decimal(1200),
             unlocked(){ 
                 return hasUpgrade([this.layer], 22);
             },
