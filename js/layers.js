@@ -160,7 +160,7 @@
             effect() {
             let eff = {}
             let eff.first = player[this.layer].buyables[this.id].div(100).add(1);
-            return ret
+            return eff
 	    },
             display() { // Everything else displayed in the buyable button after the title
                 let data = tmp[this.layer].buyables[this.id]
