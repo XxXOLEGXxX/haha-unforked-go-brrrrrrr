@@ -84,7 +84,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            return new Decimal(5).sub(upgradeDegrader.div(15));
+            return new Decimal(5).sub(new Decimal(upgradeDegrader.div(15)));
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
