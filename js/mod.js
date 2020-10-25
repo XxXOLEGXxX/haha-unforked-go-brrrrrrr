@@ -43,11 +43,6 @@ function getPointGen() {
 	return gain
 }
 
-function getFlameDepletion() {
-	let depletion = new Decimal(0.4)
-	return depletion
-}
-
 function rowReset(row, layer) {
 	for (lr in ROW_LAYERS[row]) {
 		if (layers[lr].doReset) {
