@@ -28,21 +28,18 @@
 
         layerShown() {return true},             // Returns a bool for if this layer's node should be visible in the tree.
 
- tabFormat: {
+        tabFormat: {
             "main tab": {
-            ["main-display",
-            ["prestige-button", function(){return " "}],
-            "blank",
-            "blank",
-            "upgrades", "milestones"],
-resetDescription: "YEET your shenanigans into each other, creating  ",
-	    },
-            "secondary tab": {
-            ["main-display",
-            ["prestige-button", function(){return " "}],
-            "blank",
-            "blank",
-            "upgrades", "milestones"],
+                buttonStyle() {return  {'color': 'orange'}},
+                content:
+                    ["main-display",
+                    "prestige-button",
+                    ["blank", "5px"], // Height
+                    ["raw-html", function() {return "<button onclick='console.log(`yeet`)'>'HI'</button>"}],
+                    ["display-text",
+                        function() {return 'I have ' + format(player.points) + ' pointy points!'},
+                        {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
+                    "h-line", "milestones", "blank", "upgrades", "challenges"],
 	    },
 
     upgrades: {
