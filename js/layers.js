@@ -152,17 +152,17 @@
         cols: 1,
         11: {
             display() { // Everything else displayed in the buyable button after the title
-            let amount = player[this.layer].clickables[this.id]
-            return "This button has been clicked by" + amount + "times."
+            let ret = player[this.layer].clickables[this.id]
+            return "This button has been clicked by" + ret + "times."
 	    },
             unlocked() { return player[this.layer].unlocked },
             onClick() {
-            player[this.layer].clickables[this.id].add(1);
+            let ret = player[this.layer].clickables[this.id].add(1);
+            return ret
 	    },
             effect () {
-            let ret = player[this.layer].clickables[this.id]
-            let stupid = ret.div(100).add(1);
-            return stupid;
+            let ret = player[this.layer].clickables[this.id].div(100).add(1);
+            return ret;
 	    },
 	},
     },
