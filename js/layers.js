@@ -166,7 +166,7 @@
 		    return "Amount " + player[this.layer].buyables[this.id] + "\n\
 		    Cost: Boosts the finished work's effect.\n\
 		    Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "times."
-		},
+	    },
 	},
     },
 	hotkeys: [
