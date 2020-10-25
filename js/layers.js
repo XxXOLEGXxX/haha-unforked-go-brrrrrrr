@@ -153,11 +153,4 @@
 	hotkeys: [
 		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer) } },
 	],
-prestigeButtonText(){
-                let gain = layers.s.getResetGain()
-                let start =  "YEET the plots around for " + formatWhole(gain) + " shenanigans<br>"
-                let doritoslmao = new Decimal(2)
-                let nextAt = "Next at " + formatWhole(gain.pow(doritoslmao)) + " plots"
-                return start + nextAt
-                },
 })
