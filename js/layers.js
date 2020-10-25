@@ -157,7 +157,7 @@
 	    },
             unlocked() { return player[this.layer].unlocked },
             effect () {
-            let annoying = new Decimal(1).add((player[this.layer].clickables).div(100));
+            let annoying = (player[this.layer].clickables).div(100).add(1);
             return annoying
 	    },
 	},
