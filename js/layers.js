@@ -157,7 +157,7 @@
 	    },
             unlocked() { return player[this.layer].unlocked },
             effect () {
-            let annoying = player[this.layer].clickables.[this.id].div(100).add(1);
+            let annoying = player[this.layer].clickables[this.id].div(100).add(1);
             return annoying
 	    },
 	},
