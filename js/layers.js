@@ -150,12 +150,13 @@
     clickables: {
         rows: 1,
         cols: 1,
-        masterButtonPress() {
-        let annoying = new Decimal(1.01);
-        return annoying;
-	}, // **optional** If this is present, an additional button will appear above the clickables.
-                            // pressing it will call the function.
-        masterButtonText() "Press me!" // **optional** text to display on the Master Button
+        11: {
+            display() {return "Blah"},
+            unlocked() { return player[this.layer].unlocked },
+            effect () {
+            let annoying = new Decimal(1.01);
+            return annoying
+        },
     },
 	hotkeys: [
 		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer) } },
