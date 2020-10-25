@@ -156,9 +156,11 @@
             return "This button has been clicked by" + amount + "times."
 	    },
             unlocked() { return player[this.layer].unlocked },
+            onClick() {
+            player[this.layer].clickables[this.id].add(1);
+	    },
             effect () {
-            let annoying = player[this.layer].clickables[this.id].div(100).add(1);
-            return annoying
+            player[this.layer].clickables[this.id].div(100).add(1);
 	    },
 	},
     },
