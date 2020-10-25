@@ -49,7 +49,7 @@
                     ["blank", "5px"], // Height
                     ["raw-html", function() {return "<button onclick='console.log(`yeet`)'>'HI'</button>"}],
                     ["display-text",
-                        function() {return 'You have ' + format(player[this.layer].points) + ' pointy points!'},
+                        function() {return 'You have ' + format(player.s.points) + ' pointy points!'},
                         {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}]],
 	    },
         resetDescription: "Melt your points into ",
