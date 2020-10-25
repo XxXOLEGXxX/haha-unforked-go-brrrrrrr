@@ -212,7 +212,7 @@
 	if(decreasingUpgrade > 1) decreasingUpgrade = decreasingUpgrade.sub(0.99.mul(diff)).max(0)
         else decreasingUpgrade = new Decimal(1)
         return decreasingUpgrade
-	},
+	}
     },
 
 	hotkeys: [
