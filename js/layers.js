@@ -29,8 +29,8 @@
         layerShown() {return true},             // Returns a bool for if this layer's node should be visible in the tree.
 
         tabFormat: {
-            "main tab": {
-                buttonStyle() {return  {'color': 'orange'}},
+            "Shenanigans": {
+                buttonStyle() {return  {'color': 'white'}},
                 content:
                     ["main-display",
                     "prestige-button",
@@ -41,6 +41,18 @@
                         {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
                     "h-line", "milestones", "blank", "upgrades", "challenges"],
 	    },
+            "Impatience": {
+                buttonStyle() {return  {'border-color': 'red'} {'color': 'red'}},
+                content:
+                    ["main-display",
+                    "prestige-button",
+                    ["blank", "5px"], // Height
+                    ["raw-html", function() {return "<button onclick='console.log(`yeet`)'>'HI'</button>"}],
+                    ["display-text",
+                        function() {return 'You have ' + format(player.[this.layer].points) + ' pointy points!'},
+                        {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}]],
+	    },
+        resetDescription: "Melt your points into ",
 	},
 
     upgrades: {
