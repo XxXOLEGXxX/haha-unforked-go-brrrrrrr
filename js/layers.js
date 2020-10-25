@@ -2,7 +2,7 @@ addLayer("s", {
         startData() { return {
             unlocked: true,
             points: new Decimal(0),
-            upgradeDegrader = new Decimal(0),
+            upgradeDegrader: new Decimal(0),
         };},
 
         name: "shenanigans",
