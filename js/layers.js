@@ -162,10 +162,9 @@
 	        return eff;
 	    },
 	    display() { // Everything else displayed in the buyable button after the title
-		    let data = player[this.layer].buyables[this.id]
 		    return "Level " + player[this.layer].buyables[this.id] + "\n\
 		    Cost: Boosts the finished work's effect.\n\
-		    Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + format(data.effect) "times."
+		    Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], 11) + "times."
 		},
 	},
     },
