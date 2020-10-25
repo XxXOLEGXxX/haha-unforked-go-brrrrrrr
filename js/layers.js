@@ -8,7 +8,7 @@
         let decreasingUpgrade = new Decimal(5)
         if (hasUpgrade("s", 13)) {
         let decreasingUpgrade = 5
-	if(decreasingUpgrade.gt(1)) decreasingUpgrade = decreasingUpgrade.sub(0.99.mul(diff)).max(0)
+	if(decreasingUpgrade.gt(1)) decreasingUpgrade = decreasingUpgrade.sub(new Decimal(0.99).mul(diff)).max(0)
         else decreasingUpgrade = new Decimal(1)
         return decreasingUpgrade
 	}
