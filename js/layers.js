@@ -42,7 +42,7 @@
                     "h-line", "milestones", "blank", "upgrades", "challenges"],
 	    },
             "Impatience": {
-                buttonStyle() {return  {'border-color': 'red'} {'color': 'red'}},
+                buttonStyle() {return  {'border-color': 'red'}, {'color': 'red'}},
                 content:
                     ["main-display",
                     "prestige-button",
