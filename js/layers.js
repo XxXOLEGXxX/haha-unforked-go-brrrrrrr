@@ -87,8 +87,7 @@
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            let ret = new Decimal(5)
-            return ret.sub(player.upgradeDegrader.div(15))
+            return new Decimal(5).sub(upgradeDegrader.div(15))
 	    },
             effectDisplay() {
                 return format(this.effect()) + "x";
