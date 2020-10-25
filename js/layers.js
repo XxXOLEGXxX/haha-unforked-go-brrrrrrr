@@ -35,10 +35,6 @@
                     ["main-display",
                     "prestige-button",
                     ["blank", "5px"], // Height
-                    ["raw-html", function() {return "<button onclick='console.log(`yeet`)'>'HI'</button>"}],
-                    ["display-text",
-                        function() {return 'I have ' + format(player.points) + ' pointy points!'},
-                        {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
                     "upgrades", "milestones"],
 	    },
             "Impatience": {
@@ -46,10 +42,6 @@
                 content:
                     ["main-display",
                     ["blank", "5px"], // Height
-                    ["raw-html", function() {return "<button onclick='console.log(`yeet`)'>'HI'</button>"}],
-                    ["display-text",
-                        function() {return 'You have ' + format(player.s.points) + ' pointy points!'},
-                        {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
                     "buyables"],
 	    },
 	},
@@ -165,7 +157,7 @@
                     let ret = {}
 		    return "Amount " + player[this.layer].buyables[this.id] + "\n\
 		    Cost: Boosts the finished work's effect.\n\
-		    Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "times."
+		    Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x times."
 	    },
 	},
     },
