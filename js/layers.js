@@ -140,7 +140,7 @@
                 let ret = {}
                 if (hasUpgrade("s", 22)) ret = player.points.add(1).root(32)
 		else ret = player.points.add(1).root(64)
-                if (hasUpgrade("s", 32)) ret = ret.pow(upgradeEffect("s", 32))
+                if (hasUpgrade("s", 32)) ret = ret.mul(upgradeEffect("s", 32))
                 return ret;
             },
         },
@@ -152,7 +152,7 @@
                 return hasUpgrade([this.layer], 23);
 	    },
             effect() {
-                let ret = new Decimal(1.42).pow(2)
+                let ret = Decimal.tetrate(1.42)
                 return ret;
             },
         },
