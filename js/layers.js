@@ -156,7 +156,7 @@
                 return ret;
             },
             effectDisplay() {
-                return "^^1.42");
+                return "^^1.42";
             },
         },
         33: {
