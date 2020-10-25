@@ -88,7 +88,7 @@
             },
             effect() {
             let ret = {}
-            return new Decimal(5).sub(upgradeDegrader.div(15))
+            return new Decimal(5).sub(player.upgradeDegrader.div(15))
 	    },
             effectDisplay() {
                 return format(this.effect()) + "x";
