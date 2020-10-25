@@ -28,6 +28,38 @@
 
         layerShown() {return true},             // Returns a bool for if this layer's node should be visible in the tree.
 
+tabFormat: {
+            "Shenanigans": {
+                buttonStyle() {return  {'color': 'white'}},
+                content:
+                    ["main-display",
+                    "prestige-button",
+                    ["blank", "5px"], // Height
+                    ["raw-html", function() {return "<button onclick='console.log(`yeet`)'>'HI'</button>"}],
+                    ["display-text",
+                        function() {return 'I have ' + format(player.points) + ' pointy points!'},
+                        {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
+"upgrades", "challenges"],
+            },
+            Imnpatience: {
+                style() {return  {'background-color': '#00000'}},
+                buttonStyle() {return {'border-color': 'orange'}},
+                content:[ 
+                    ["buyables", ""], "blank",
+                    ["row", [
+                        ["column", [
+                            ["prestige-button", "", {'width': '150px', 'height': '80px'}],
+                            ["prestige-button", "", {'width': '100px', 'height': '150px'}],
+                        ]], 
+                    "blank",
+                    ["display-image", "discord.png"],],
+            },
+]
+                ]
+            }
+
+        },
+
 
     upgrades: {
         rows: 3,
