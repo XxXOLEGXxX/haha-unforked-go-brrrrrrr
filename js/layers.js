@@ -26,7 +26,7 @@ addLayer("s", {
         },
 
         update(diff){
-            if(hasUpgrade([this.layer], 13)) upgradeTime = upgradeTime.add(diff)
+            if(hasUpgrade(this.layer, 13)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
 	},
 
         layerShown() {return true;},
