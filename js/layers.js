@@ -28,6 +28,16 @@
 
         layerShown() {return true},             // Returns a bool for if this layer's node should be visible in the tree.
 
+ tabFormat: ["main-display",
+            ["prestige-button", function(){return "Melt your points into "}],
+            "blank",
+            ["display-text",
+                function() {return 'I have ' + format(player.points) + ' pointy points!'},
+                {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
+            "blank",
+            ["toggle", ["c", "beep"]],
+            "milestones", "blank", "blank", "upgrades"],
+
     upgrades: {
         rows: 3,
         cols: 3,
