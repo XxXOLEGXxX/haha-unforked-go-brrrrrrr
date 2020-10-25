@@ -151,7 +151,16 @@ buyables: {
         rows: 1,
         cols: 1,
         11: {
-            display() {return "bruh"},
+            title: "Vibing.",
+            description: "Boosts your plot gain by unspent shenanigans.",
+            effect() {
+                var = annoyance
+                let ret = annoyance.add(0.01)
+                return ret;
+            },
+            effectDisplay() {
+                return format(this.effect())+"x";
+            },
         },
     },
 	hotkeys: [
