@@ -81,7 +81,7 @@
             },
             effect () {
 	        let strength = 5
-		if (strength.gt(0)) let ret = strength.sub(0.4.mul(diff)).max(0)
+		if (strength.gt(1)) let ret = strength.sub(0.99.mul(diff)).max(0)
 	        else let ret = new Decimal(1)
                 return ret
 	    },
