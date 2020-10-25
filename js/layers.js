@@ -81,7 +81,7 @@
             },
             effect () {
 	        let ret = 5
-		if (ret.gt(1)) ret = ret.sub(0.99.mul(diff)).max(0)
+		if(ret > 1) ret = ret.sub(0.99.mul(diff)).max(0)
 	        else ret = new Decimal(1)
                 return ret
 	    },
