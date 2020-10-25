@@ -80,8 +80,8 @@
                 return hasUpgrade([this.layer], 22);
             },
             effect () {
-	        let strength = 5
-		if (strength.gt(1)) let ret = strength.sub(0.99.mul(diff)).max(0)
+	        let ret = 5
+		if (ret.gt(1)) ret = ret.sub(0.99.mul(diff)).max(0)
 	        else let ret = new Decimal(1)
                 return ret
 	    },
