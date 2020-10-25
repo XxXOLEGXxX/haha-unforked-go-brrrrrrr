@@ -3,7 +3,6 @@ addLayer("s", {
             unlocked: true,
             points: new Decimal(0),
             upgradeDegrader: new Decimal(0),
-            update(diff),
         };},
 
         name: "shenanigans",
@@ -25,6 +24,12 @@ addLayer("s", {
         gainExp() {
             return new Decimal(1);
         },
+
+        update(diff){
+            if(hasUpgrade([this.layer],13)) {
+                upgradeTime = upgradeTime.add(diff)
+            }
+	},
 
         layerShown() {return true;},
 
@@ -203,8 +208,6 @@ addLayer("s", {
 	    },
 	},
     },
-            update(diff)
-            if(hasUpgrade("s", 13)) upgradeDegrader = upgradeDegrader.add(diff);,
 	hotkeys: [
 		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer); } },
 	],
