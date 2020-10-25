@@ -1,7 +1,7 @@
 addLayer("s", {
-        startData() { return {                  // startData is a function that returns default data for a layer. 
-            unlocked: true,                    // You can add more variables here to add them to your layer.
-            points: new Decimal(0),             // "points" is the internal name for the main resource of the layer.
+        startData() { return {
+            unlocked: true,
+            points: new Decimal(0),
             upgradeDegrader: new Decimal(0),
         }},
 
@@ -12,28 +12,26 @@ addLayer("s", {
     },
 
         name: "shenanigans",
-        color: "#420420",                       // The color for this layer, which affects many elements
-        resource: "shenanigans",            // The name of this layer's main prestige resource
-        row: 0,                                 // The row this layer is on (0 is the first row)
+        color: "#420420",
+        resource: "shenanigans",
+        row: 0,
 
-        baseResource: "shenanigans",                 // The name of the resource your prestige gain is based on
-        baseAmount() {return player.points},    // A function to return the current value of that resource
+        baseResource: "shenanigans",
+        baseAmount() {return player.points},
 
-        requires: new Decimal(1),            // The amount of the base needed to  gain 1 of the prestige currency.
-                                                // Also the amount required to unlock the layer.
-        
-        type: "normal",                         // Determines the formula used for calculating prestige currency.
-        exponent: 0.5,                          // "normal" prestige gain is (currency^exponent)
+        requires: new Decimal(1),
+        type: "normal",
+        exponent: 0.5,
 
-        gainMult() {                            // Returns your multiplier to your gain of the prestige resource
+        gainMult() {
             let mult = new Decimal(1);
             return mult
         },
-        gainExp() {                             // Returns your exponent to your gain of the prestige resource
+        gainExp() {
             return new Decimal(1)
         },
 
-        layerShown() {return true},             // Returns a bool for if this layer's node should be visible in the tree.
+        layerShown() {return true},
 
         tabFormat: {
             "Shenanigans": {
@@ -43,15 +41,15 @@ addLayer("s", {
                     "prestige-button",
                     ["blank", "5px"], // Height
                     "upgrades", "milestones"],
-	    },
+        },
             "Impatience": {
                 buttonStyle() {return  {'border-color': 'red', 'color': 'red'}},
                 content:
                     ["main-display",
                     ["blank", "5px"], // Height
                     "buyables"],
-	    },
-	},
+        },
+    },
 
     upgrades: {
         rows: 3,
@@ -65,7 +63,7 @@ addLayer("s", {
             title: "Vibing.",
             description: "Boosts your plot gain by unspent shenanigans.",
             cost: new Decimal(10),
-            unlocked() { 
+            unlocked(){ 
                 return hasUpgrade([this.layer], 11);
             },
             effect() {
@@ -83,7 +81,7 @@ addLayer("s", {
             title: "wip.",
             description: "wip.",
             cost: new Decimal(2200),
-            unlocked() { 
+            unlocked(){ 
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
@@ -97,7 +95,7 @@ addLayer("s", {
             title: "wip.",
             description: "wip.",
             cost: new Decimal(1e9001),
-            unlocked() { 
+            unlocked(){ 
                 return hasUpgrade([this.layer], 22);
             },
         },
@@ -105,7 +103,7 @@ addLayer("s", {
             title: "Tiny desk exponent.",
             description: "Adds ^1.01 to the previous upgrade.",
             cost: new Decimal(20),
-            unlocked() { 
+            unlocked(){ 
                 return hasUpgrade([this.layer], 12);
             },
             effect() {
@@ -122,7 +120,7 @@ addLayer("s", {
             title: "Supreme Hexagonity.",
             description: "Unlocks a bunch of things and buffs 6th upgrade.",
             cost: new Decimal(999),
-            unlocked() { 
+            unlocked(){ 
                 return hasUpgrade([this.layer], 21);
             },
         },
@@ -130,7 +128,7 @@ addLayer("s", {
             title: "Another exponent...?",
             description: "Adds another ^1.01 to both ''Tiny desk exponent'' and ''Exponent'' upgrades.",
             cost: new Decimal(100),
-            unlocked() { 
+            unlocked(){ 
                 return hasUpgrade([this.layer], 21);
             },
             effect() {
@@ -152,7 +150,7 @@ addLayer("s", {
             effect() {
                 let ret = {}
                 if (hasUpgrade("s", 22)) ret = player.points.add(1).root(32)
-		else ret = player.points.add(1).root(64)
+        else ret = player.points.add(1).root(64)
                 if (hasUpgrade("s", 32)) ret = ret.tetrate(upgradeEffect("s", 32))
                 return ret;
             },
@@ -161,9 +159,9 @@ addLayer("s", {
             title: "Tetrate-inator.",
             description: "Tetrates the upgrade left to it by 1.420.",
             cost: new Decimal(400),
-            unlocked() { 
+            unlocked(){ 
                 return hasUpgrade([this.layer], 23);
-	    },
+        },
             effect() {
                 let ret = new Decimal(1.42)
                 return ret;
@@ -176,7 +174,7 @@ addLayer("s", {
             title: "wip.",
             description: "wip.",
             cost: new Decimal(1e9001),
-            unlocked() { 
+            unlocked(){ 
                 return hasUpgrade([this.layer], 22);
             },
         },
@@ -184,7 +182,7 @@ addLayer("s", {
             title: "wip.",
             description: "wip.",
             cost: new Decimal(1e9001),
-            unlocked() { 
+            unlocked(){ 
                 return hasUpgrade([this.layer], 22);
             },
         },
@@ -194,19 +192,18 @@ addLayer("s", {
         cols: 1,
         11: {
             title: "Boredom.",
-            unlocked() { return player[this.layer].unlocked }, 
+            unlocked(){ return player[this.layer].unlocked }, 
             canAfford() { return player[this.layer].unlocked },
             buy() {
             player[this.layer].buyables[this.id] = player[this.layer].buyables[this.id].add(1)
-	    },
+        },
             effect() {
-	        let eff = player[this.layer].buyables[this.id].mul(0.01).add(1)
-	        return eff;
-	    },
-	    display() { // Everything else displayed in the buyable button after the title
+            let eff = player[this.layer].buyables[this.id].mul(0.01).add(1)
+            return eff;
+        },
+        display() { // Everything else displayed in the buyable button after the title
                     let ret = {}
-		    return "Amount: " + player[this.layer].buyables[this.id] + "\n\
-		    Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x times."
+            return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x times."
 	    },
 	},
     },
