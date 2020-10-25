@@ -41,7 +41,6 @@
                         function() {return 'I have ' + format(player.points) + ' pointy points!'},
                         {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
                     "h-line", "milestones", "blank", "upgrades", "challenges"],
-        },
 	    },
             "Impatience": {
                 buttonStyle() {return  {'border-color': 'red', 'color': 'red'}},
@@ -52,7 +51,8 @@
                     ["raw-html", function() {return "<button onclick='console.log(`yeet`)'>'HI'</button>"}],
                     ["display-text",
                         function() {return 'You have ' + format(player.s.points) + ' pointy points!'},
-                        {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}]],
+                        {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}]
+                    "buyables"],
 	    },
 	},
 
@@ -149,7 +149,14 @@
             },
         },
     },
-
+buyables: {
+        rows: 1,
+        cols: 1,
+        11: {
+            display() {return "Blah"},
+            etc
+        },
+    },
 	hotkeys: [
 		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer) } },
 	],
