@@ -5,10 +5,10 @@ addLayer("s", {
             upgradeDegrader: new Decimal(0),
             update(diff){
             if(hasUpgrade("s", 13)) {
-                upgradeDegrader = upgradeDegrader.add(diff)
+                upgradeDegrader = upgradeDegrader.add(diff);
 	    }
 	    },
-        }},
+        };},
 
         name: "shenanigans",
         color: "#420420",
@@ -16,7 +16,7 @@ addLayer("s", {
         row: 0,
 
         baseResource: "shenanigans",
-        baseAmount() {return player.points},
+        baseAmount() {return player.points;},
 
         requires: new Decimal(1),
         type: "normal",
@@ -24,17 +24,17 @@ addLayer("s", {
 
         gainMult() {
             let mult = new Decimal(1);
-            return mult
+            return mult;
         },
         gainExp() {
-            return new Decimal(1)
+            return new Decimal(1);
         },
 
-        layerShown() {return true},
+        layerShown() {return true;},
 
         tabFormat: {
             "Shenanigans": {
-                buttonStyle() {return  {'color': 'white'}},
+                buttonStyle() {return  {'color': 'white'};},
                 content:
                     ["main-display",
                     "prestige-button",
@@ -42,7 +42,7 @@ addLayer("s", {
                     "upgrades", "milestones"],
         },
             "Impatience": {
-                buttonStyle() {return  {'border-color': 'red', 'color': 'red'}},
+                buttonStyle() {return  {'border-color': 'red', 'color': 'red'};},
                 content:
                     ["main-display",
                     ["blank", "5px"], // Height
@@ -67,9 +67,9 @@ addLayer("s", {
             },
             effect() {
                 let ret = player[this.layer].points.add(1).root(2);
-                if (hasUpgrade("s", 21)) ret = ret.pow(upgradeEffect("s", 21))
-                if (hasUpgrade("s", 23)) ret = ret.pow(upgradeEffect("s", 23))
-                if (hasUpgrade("s", 31)) ret = ret.pow(upgradeEffect("s", 31))
+                if (hasUpgrade("s", 21)) ret = ret.pow(upgradeEffect("s", 21));
+                if (hasUpgrade("s", 23)) ret = ret.pow(upgradeEffect("s", 23));
+                if (hasUpgrade("s", 31)) ret = ret.pow(upgradeEffect("s", 31));
                 return ret;
             },
             effectDisplay() {
@@ -84,7 +84,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            return new Decimal(5).sub(upgradeDegrader.div(15))
+            return new Decimal(5).sub(upgradeDegrader.div(15));
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
@@ -106,9 +106,9 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 12);
             },
             effect() {
-                let ret = new Decimal(1.01)
-                if (hasUpgrade("s", 23)) ret = ret.pow(upgradeEffect("s", 23))
-                if (hasUpgrade("s", 31)) ret = ret.pow(upgradeEffect("s", 31))
+                let ret = new Decimal(1.01);
+                if (hasUpgrade("s", 23)) ret = ret.pow(upgradeEffect("s", 23));
+                if (hasUpgrade("s", 31)) ret = ret.pow(upgradeEffect("s", 31));
                 return ret;
             },
             effectDisplay() {
@@ -131,8 +131,8 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 21);
             },
             effect() {
-                let ret = new Decimal(1.01)
-                if (hasUpgrade("s", 31)) ret = ret.pow(upgradeEffect("s", 31))
+                let ret = new Decimal(1.01);
+                if (hasUpgrade("s", 31)) ret = ret.pow(upgradeEffect("s", 31));
                 return ret;
             },
             effectDisplay() {
@@ -147,10 +147,10 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 23);
             },
             effect() {
-                let ret = {}
-                if (hasUpgrade("s", 22)) ret = player.points.add(1).root(32)
-        else ret = player.points.add(1).root(64)
-                if (hasUpgrade("s", 32)) ret = ret.tetrate(upgradeEffect("s", 32))
+                let ret = {};
+                if (hasUpgrade("s", 22)) ret = player.points.add(1).root(32);
+        else ret = player.points.add(1).root(64);
+                if (hasUpgrade("s", 32)) ret = ret.tetrate(upgradeEffect("s", 32));
                 return ret;
             },
         },
@@ -162,7 +162,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 23);
         },
             effect() {
-                let ret = new Decimal(1.42)
+                let ret = new Decimal(1.42);
                 return ret;
             },
             effectDisplay() {
@@ -191,23 +191,23 @@ addLayer("s", {
         cols: 1,
         11: {
             title: "Boredom.",
-            unlocked(){ return player[this.layer].unlocked }, 
-            canAfford() { return player[this.layer].unlocked },
+            unlocked(){ return player[this.layer].unlocked; }, 
+            canAfford() { return player[this.layer].unlocked; },
             buy() {
-            player[this.layer].buyables[this.id] = player[this.layer].buyables[this.id].add(1)
+            player[this.layer].buyables[this.id] = player[this.layer].buyables[this.id].add(1);
         },
             effect() {
-            let eff = player[this.layer].buyables[this.id].mul(0.01).add(1)
+            let eff = player[this.layer].buyables[this.id].mul(0.01).add(1);
             return eff;
         },
         display() { // Everything else displayed in the buyable button after the title
-                    let ret = {}
-            return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x times."
+                    let ret = {};
+            return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x times.";
 	    },
 	},
     },
 
 	hotkeys: [
-		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer) } },
+		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer); } },
 	],
-})
+});
