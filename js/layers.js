@@ -160,7 +160,7 @@
             player[this.layer].clickables[this.id].add(1);
 	    },
             effect () {
-            player[this.layer].clickables[this.id].divide(100).add(1);
+            player[this.layer].clickables[this.id].div(100).add(1);
 	    },
 	},
     },
