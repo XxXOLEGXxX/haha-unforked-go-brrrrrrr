@@ -161,8 +161,7 @@
             return ret
 	    },
             effect () {
-            let id = new Decimal(11)
-            let ret = player.s.clickables.id.div(100).add(1);
+            let ret = player.s.clickables[this.id].div(100).add(1);
             return ret;
 	    },
 	},
