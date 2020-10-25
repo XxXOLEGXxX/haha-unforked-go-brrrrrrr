@@ -8,7 +8,7 @@
     update(diff) {
         if(hasUpgrade("s", 13)) {
             upgradeDegrader = upgradeDegrader.add(diff)
-        }
+        },
     },
 
         name: "shenanigans",
