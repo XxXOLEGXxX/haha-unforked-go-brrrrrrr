@@ -3,7 +3,7 @@ addLayer("s", {
             unlocked: true,
             points: new Decimal(0),
             upgradeDegrader: new Decimal(0),
-            update(diff);
+            update(diff),
         };},
 
         name: "shenanigans",
