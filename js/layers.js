@@ -79,13 +79,9 @@
             unlocked() { 
                 return hasUpgrade([this.layer], 22);
             },
-            effect () {
-            update(diff) {
-	        let ret = 5
-		if(ret > 1) ret = ret.sub(0.99.mul(diff)).max(0)
-	        else ret = new Decimal(1)
-                return ret
-	    },
+            effect() {
+                let ret = new Decimal(5).div(data.decreasingUpgrade);
+                return ret;
 	    },
             effectDisplay() {
                 return format(this.effect()) + "x";
@@ -203,11 +199,22 @@
 	    },
 	    display() { // Everything else displayed in the buyable button after the title
                     let ret = {}
-		    return "Amount " + player[this.layer].buyables[this.id] + "\n\
+		    return "Amount: " + player[this.layer].buyables[this.id] + "\n\
 		    Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x times."
 	    },
 	},
     },
+
+    update(diff) {
+        let decreasingUpgrade = new Decimal(5)
+        if (hasUpgrade("s", 13)) {
+        let decreasingUpgrade = 5
+	if(decreasingUpgrade > 1) decreasingUpgrade = decreasingUpgrade.sub(0.99.mul(diff)).max(0)
+        else decreasingUpgrade = new Decimal(1)
+        return decreasingUpgrade
+	},
+    },
+
 	hotkeys: [
 		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer) } },
 	],
