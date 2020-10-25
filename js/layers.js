@@ -90,7 +90,7 @@
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-                let ret = new Decimal(5).div(data.decreasingUpgrade);
+                let ret = new Decimal(5).div(player.decreasingUpgrade);
                 return ret;
 	    },
             effectDisplay() {
