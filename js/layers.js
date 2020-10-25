@@ -1,8 +1,7 @@
-            update(diff){
+            update(diff)
             if(hasUpgrade("s", 13)) {
                 upgradeDegrader = upgradeDegrader.add(diff);
 	    }
-	    },
 
 addLayer("s", {
         startData() { return {
