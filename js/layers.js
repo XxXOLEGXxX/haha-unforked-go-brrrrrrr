@@ -91,8 +91,8 @@
         },
         22: {
             title: "Supreme Hexagonity.",
-            description: "You'll see soon. (WIP)",
-            cost: new Decimal(1e9001),
+            description: "Unlocks a bunch of things and buffs 6th upgrade.",
+            cost: new Decimal(999),
             unlocked() { 
                 return hasUpgrade([this.layer], 21);
             },
@@ -121,7 +121,9 @@
                 return hasUpgrade([this.layer], 23);
             },
             effect() {
-                let ret = player.points.add(1).root(64);
+                let rero = 64
+                if (hasUpgrade("s", 23)) rero = rero.div(2)
+                let ret = player.points.add(1).root(rero);
                 if (hasUpgrade("s", 32)) ret = ret.tetrate(upgradeEffect("s", 32))
                 return ret;
             },
