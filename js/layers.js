@@ -83,7 +83,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            return new Decimal(5).sub(data.upgradeTime.div(15))
+            return new Decimal(5.0001).sub(data.upgradeTime.div(15))
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
