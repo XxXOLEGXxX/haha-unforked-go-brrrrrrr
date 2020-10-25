@@ -160,8 +160,8 @@
             player[this.layer].clickables[this.id].add(1);
 	    },
             effect () {
-            let stupid = player[this.layer].clickables[this.id]
-            stupid.div(100).add(1);
+            let ret = player[this.layer].clickables[this.id]
+            let stupid = ret.div(100).add(1);
             return stupid;
 	    },
 	},
