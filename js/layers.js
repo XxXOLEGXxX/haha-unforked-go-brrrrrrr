@@ -50,7 +50,7 @@
                     ["display-text",
                         function() {return 'You have ' + format(player.s.points) + ' pointy points!'},
                         {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
-                    "buyables"],
+                    "clickables"],
 	    },
 	},
 
@@ -147,20 +147,11 @@
             },
         },
     },
-buyables: {
+clickables: {
         rows: 1,
         cols: 1,
         11: {
-            title: "Vibing.",
-            description: "Boosts your plot gain by unspent shenanigans.",
-            effect() {
-                var = annoyance
-                let ret = annoyance.add(0.01)
-                return ret;
-            },
-            effectDisplay() {
-                return format(this.effect())+"x";
-            },
+            display() {return "Blah"},
         },
     },
 	hotkeys: [
