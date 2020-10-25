@@ -37,7 +37,7 @@ function getPointGen() {
 		return new Decimal(0)
 	}
 
-	let gain = new Decimal(0.01666666666666666666666666666667)
+	let gain = new Decimal(0.01666666666666666666666666666667).mul(buyableEffect("s", 11))
         if (hasUpgrade("s", 11)) gain = gain.times(new Decimal(60));
         if (hasUpgrade("s", 12)) gain = gain.times(upgradeEffect("s", 12))
 	return gain
