@@ -137,9 +137,9 @@
                 return hasUpgrade([this.layer], 23);
             },
             effect() {
-                let rero = 64
-                if (hasUpgrade("s", 22)) rero = rero.mul(0.5)
-                let ret = player.points.add(1).root(rero);
+                let ret = {}
+                if (hasUpgrade("s", 22)) ret = player.points.add(1).root(32)
+		else ret = player.points.add(1).root(64)
                 if (hasUpgrade("s", 32)) ret = ret.tetrate(upgradeEffect("s", 32))
                 return ret;
             },
