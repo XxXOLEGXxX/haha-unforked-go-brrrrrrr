@@ -75,9 +75,18 @@
         13: {
             title: "wip.",
             description: "wip.",
-            cost: new Decimal(1e9001),
+            cost: new Decimal(1200),
             unlocked() { 
                 return hasUpgrade([this.layer], 22);
+            },
+            effect () {
+	        let strength = 5
+		if (strength = 1) let ret = 1
+	        else let ret = strength.sub(getFlameDepletion().mul(diff)).max(0)
+                return ret
+	    },
+            effectDisplay() {
+                return format(this.effect()) + "x";
             },
         },
         14: {
