@@ -27,6 +27,7 @@ addLayer("s", {
 
         update(diff){
             if(hasUpgrade(this.layer, 13)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
+            if(player[this.layer].upgradeTime = new Decimal(1)) player[this.layer].upgradeTime = 60
 	},
 
         layerShown() {return true;},
@@ -83,9 +84,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            if (player[this.layer].upgradeTime > 1)
-            return new Decimal(5).sub(player[this.layer].upgradeTime.div(2));
-            else return new Decimal (1)
+            return new Decimal(5).sub(player[this.layer].upgradeTime.div(15));
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
