@@ -155,8 +155,8 @@
             let ret = player[this.layer].clickables[this.id]
             return "This button has been clicked by" + ret + "times."
 	    },
-            unlocked() { return player[this.layer].unlocked },
-            onClick() {
+            unlocked() { return player[this.layer].unlocked }, 
+            canClick() { return player[this.layer].unlocked },
             let ret = player[this.layer].clickables[this.id].add(1);
             return ret
 	    },
