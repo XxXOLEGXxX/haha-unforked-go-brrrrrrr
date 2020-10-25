@@ -4,6 +4,16 @@
             points: new Decimal(0),             // "points" is the internal name for the main resource of the layer.
         }},
 
+    update(diff) {
+        let decreasingUpgrade = new Decimal(5)
+        if (hasUpgrade("s", 13)) {
+        let decreasingUpgrade = 5
+	if(decreasingUpgrade > 1) decreasingUpgrade = decreasingUpgrade.sub(0.99.mul(diff)).max(0)
+        else decreasingUpgrade = new Decimal(1)
+        return decreasingUpgrade
+	}
+    },
+
         name: "shenanigans",
         color: "#420420",                       // The color for this layer, which affects many elements
         resource: "shenanigans",            // The name of this layer's main prestige resource
@@ -203,16 +213,6 @@
 		    Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x times."
 	    },
 	},
-    },
-
-    update(diff) {
-        let decreasingUpgrade = new Decimal(5)
-        if (hasUpgrade("s", 13)) {
-        let decreasingUpgrade = 5
-	if(decreasingUpgrade > 1) decreasingUpgrade = decreasingUpgrade.sub(0.99.mul(diff)).max(0)
-        else decreasingUpgrade = new Decimal(1)
-        return decreasingUpgrade
-	}
     },
 
 	hotkeys: [
