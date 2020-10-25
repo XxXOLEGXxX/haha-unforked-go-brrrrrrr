@@ -84,7 +84,7 @@ addLayer("s", {
             },
             effect() {
             if (player[this.layer].upgradeTime > 1)
-            return new Decimal(5).sub(player[this.layer].upgradeTime.div(15));
+            return new Decimal(5).sub(player[this.layer].upgradeTime.div(120));
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
