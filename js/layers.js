@@ -72,6 +72,16 @@
                 return format(this.effect())+"x";
             },
         },
+        13: {
+            title: "wip.",
+            description: "wip.",
+            cost: new Decimal(1e9001),
+        },
+        14: {
+            title: "wip.",
+            description: "wip.",
+            cost: new Decimal(1e9001),
+        },
         21: {
             title: "Tiny desk exponent.",
             description: "Adds ^1.01 to the previous upgrade.",
@@ -139,6 +149,16 @@
                 let ret = new Decimal(1.42)
                 return ret;
             },
+        },
+        33: {
+            title: "wip.",
+            description: "wip.",
+            cost: new Decimal(1e9001),
+        },
+        34: {
+            title: "wip.",
+            description: "wip.",
+            cost: new Decimal(1e9001),
         },
     },
     buyables: {
