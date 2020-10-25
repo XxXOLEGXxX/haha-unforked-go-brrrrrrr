@@ -80,10 +80,12 @@
                 return hasUpgrade([this.layer], 22);
             },
             effect () {
+            update(diff) {
 	        let ret = 5
 		if(ret > 1) ret = ret.sub(0.99.mul(diff)).max(0)
 	        else ret = new Decimal(1)
                 return ret
+	    },
 	    },
             effectDisplay() {
                 return format(this.effect()) + "x";
