@@ -34,12 +34,20 @@
                 content:
                     ["main-display",
                     "prestige-button",
+
                     ["blank", "5px"], // Height
                     ["raw-html", function() {return "<button onclick='console.log(`yeet`)'>'HI'</button>"}],
                     ["display-text",
                         function() {return 'I have ' + format(player.points) + ' pointy points!'},
                         {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}],
                     "h-line", "milestones", "blank", "upgrades", "challenges"],
+prestigeButtonText(){
+                let gain = layers.s.getResetGain()
+                let start =  "YEET the plots around for " + formatWhole(gain) + " shenanigans<br>"
+                let doritoslmao = new Decimal(2)
+                let nextAt = "Next at " + formatWhole(gain.pow(doritoslmao)) + " plots"
+                return start + nextAt
+        },
 	    },
             "Impatience": {
                 buttonStyle() {return  {'border-color': 'red', 'color': 'red'}},
@@ -52,7 +60,6 @@
                         function() {return 'You have ' + format(player.s.points) + ' pointy points!'},
                         {"color": "red", "font-size": "32px", "font-family": "Comic Sans MS"}]],
 	    },
-        resetDescription: "Melt your points into ",
 	},
 
     upgrades: {
