@@ -151,8 +151,7 @@ buyables: {
         rows: 1,
         cols: 1,
         11: {
-            display() {return "Blah"},
-            etc
+            display() {return "bruh"},
         },
     },
 	hotkeys: [
