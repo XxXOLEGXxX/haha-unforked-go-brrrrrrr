@@ -20,6 +20,7 @@ addLayer("s", {
         gainMult() {
             let mult = new Decimal(1);
             if (hasUpgrade("s", 33)) mult = mult.mul(upgradeEffect("s", 33));
+            if (hasUpgrade("s", 34)) mult = mult.mul(new Decimal(player[this.layer].buyables[this.id].div(10)).add(1))
             return mult;
         },
         gainExp() {
@@ -79,7 +80,7 @@ addLayer("s", {
         },
         13: {
             title: "Degrading Upgrade.",
-            description: "REWORKING.",
+            description: "Boosts your plot gain by 5x initally, then linearly decreases over time (caps at 1x).",
             cost: new Decimal(1200),
             unlocked(){ 
                 return hasUpgrade([this.layer], 22);
@@ -185,9 +186,9 @@ addLayer("s", {
             },
         },
         34: {
-            title: "wip.",
-            description: "wip.",
-            cost: new Decimal(1e9001),
+            title: "Ughh...",
+            description: "Boredom now weakly boosts shenanigans gain too, apparently.",
+            cost: new Decimal(15000),
             unlocked(){ 
                 return hasUpgrade([this.layer], 22);
             },
@@ -204,12 +205,13 @@ addLayer("s", {
             player[this.layer].buyables[this.id] = player[this.layer].buyables[this.id].add(1);
         },
             effect() {
-            let eff = player[this.layer].buyables[this.id].mul(0.01).add(1);
+            let eff = player[this.layer].buyables[this.id].mul(0.01).add(1)
             return eff;
         },
         display() { // Everything else displayed in the buyable button after the title
                     let ret = {};
-            return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x times.";
+            return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x.";
+            if(hasUpgrade("s", 34)) return ".. And boosts shenanigans gain by " + new Decimal(buyableEffect([this.layer], [this.id])).div(10) + "x";
 	    },
 	},
     },
