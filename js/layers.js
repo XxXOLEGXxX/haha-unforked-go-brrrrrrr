@@ -10,7 +10,7 @@ addLayer("s", {
         resource: "shenanigans",
         row: 0,
 
-        baseResource: "plots",
+        baseResource: "shenanigans",
         baseAmount() {return player.points;},
 
         requires: new Decimal(1),
@@ -47,7 +47,7 @@ addLayer("s", {
                 buttonStyle() {return  {'border-color': 'red', 'color': 'red'};},
                 content:
                     ["main-display",
-                    ["blank", "5px"],
+                    ["blank", "5px"], // Height
                     "buyables"],
         },
     },
