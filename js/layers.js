@@ -29,7 +29,6 @@ addLayer("s", {
         update(diff){
             if(hasUpgrade(this.layer, 13) && upgradeEffect(this.layer, 13) > new Decimal(1)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
             if(player[this.layer].upgradeTime > new Decimal(60)) player[this.layer].upgradeTime = new Decimal(60)
-            player[this.layer].ZATIME = player[this.layer].ZATIME.add(diff)
 	},
 
         layerShown() {return true;},
@@ -179,7 +178,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-                return player[this.layer].points.mul((player[this.layer].ZATIME).root(60));
+                return player[this.layer].points.mul((player[this.layer].timePlayed).root(60));
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
