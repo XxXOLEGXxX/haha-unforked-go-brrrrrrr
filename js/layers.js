@@ -2,6 +2,7 @@ addLayer("s", {
         startData() { return {
             unlocked: true,
             points: new Decimal(0),
+            ZATIME: new Decimal(0),
             upgradeTime: new Decimal(0),
         };},
 
@@ -28,6 +29,10 @@ addLayer("s", {
         update(diff){
             if(hasUpgrade(this.layer, 13) && upgradeEffect(this.layer, 13) > new Decimal(1)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
             if(player[this.layer].upgradeTime > new Decimal(60)) player[this.layer].upgradeTime = new Decimal(60)
+	},
+
+        update(diff){
+            player[this.layer].ZATIME = player[this.layer].ZATIME.add(diff)
 	},
 
         layerShown() {return true;},
@@ -91,8 +96,8 @@ addLayer("s", {
             },
         },
         14: {
-            title: "wip.",
-            description: "wip.",
+            title: "Negotiator.",
+            description: "Unlocks a button, which resets ''Degrading Upgrade.'''s effect.",
             cost: new Decimal(1800),
             unlocked(){ 
                 return hasUpgrade([this.layer], 22);
@@ -117,7 +122,7 @@ addLayer("s", {
         },
         22: {
             title: "Supreme Hexagonity.",
-            description: "Unlocks a bunch of things and buffs 6th upgrade.",
+            description: "Unlocks a bunch of things and buffs ''B.E.G,H.A.Y!'' upgrade.",
             cost: new Decimal(999),
             unlocked(){ 
                 return hasUpgrade([this.layer], 21);
@@ -141,7 +146,7 @@ addLayer("s", {
         },
         31: {
             title: "But enough grinding, have at you!",
-            description: "Exponents all the upgrades (excluding the first) based on unspent points.",
+            description: "Exponents all the upgrades around ''S.H.'' (excluding the first) based on unspent points.",
             cost: new Decimal(250),
             unlocked() { 
                 return hasUpgrade([this.layer], 23);
@@ -170,11 +175,18 @@ addLayer("s", {
             },
         },
         33: {
-            title: "wip.",
-            description: "wip.",
-            cost: new Decimal(1e9001),
+            title: "haha shenanigans go brrrr.",
+            description: "Boosts shenanigans gain by how many time has passed at reduced rate.",
+            cost: new Decimal(2500),
             unlocked(){ 
                 return hasUpgrade([this.layer], 22);
+            },
+            effect() {
+                let ret = player[this.layer].points.mul((layer[this.layer].ZATIME).root(60));
+                return ret;
+            },
+            effectDisplay() {
+                return format(this.effect()) + "x";
             },
         },
         34: {
@@ -215,7 +227,7 @@ clickables: {
         },
         masterButtonText() {
         if (player[this.layer].upgradeTime < new Decimal(60)) return "Wait for " + Math.round(new Decimal(60).sub(player[this.layer].upgradeTime)) + " more second(s).";
-        if (player[this.layer].upgradeTime = new Decimal(60)) return "Press me!";
+        if (player[this.layer].upgradeTime = new Decimal(60)) return "Reset 3rd upgrade's effect.";
 	},// **optional** text to display on the Master Button
         showMasterButton() {
         return hasUpgrade([this.layer], 14);
