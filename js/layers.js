@@ -26,8 +26,8 @@ addLayer("s", {
         },
 
         update(diff){
-            if(hasUpgrade([this.layer], 13) && upgradeEffect([this.layer], 13).gt(new Decimal(1))) player[this.layer].upgradeTime.e(player[this.layer].upgradeTime.add(diff))
-            if(upgradeEffect([this.layer], 13).lt(new Decimal(1))) player[this.layer].upgradeTime.e(new Decimal(60))
+            if(hasUpgrade([this.layer], 13) && upgradeEffect([this.layer], 13).gt(new Decimal(1))) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
+            if(upgradeEffect([this.layer], 13).lt(new Decimal(1))) player[this.layer].upgradeTime = new Decimal(60)
     },
 
         layerShown() {return true;},
