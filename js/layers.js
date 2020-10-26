@@ -3,7 +3,6 @@ addLayer("s", {
             unlocked: true,
             points: new Decimal(0),
             upgradeTime: new Decimal(0),
-            bigBrainMoment: new Decimal(0),
         };},
 
         name: "shenanigans",
@@ -49,9 +48,6 @@ addLayer("s", {
                 content:
                     ["main-display",
                     ["blank", "5px"],
-                    ["display-text",
-                    function() {return 'You have ' + format(player.s.bigBrainMoment) + ' boring stuff.'},
-                    {"color": "gray", "font-size": "32px", "font-family": "Arial"}], // Height
                     "buyables"],
         },
     },
@@ -209,7 +205,6 @@ addLayer("s", {
             canAfford() { return player[this.layer].unlocked; },
             buy() {
             player[this.layer].buyables[this.id] = player[this.layer].buyables[this.id].add(1);
-            player[this.layer].bigbrainmoment = player[this.layer].buyables[this.id];
         },
             effect() {
             let eff = player[this.layer].buyables[this.id].mul(0.01).add(1)
