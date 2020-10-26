@@ -26,7 +26,7 @@ addLayer("s", {
         },
 
         update(diff){
-            if(hasUpgrade(this.layer, 13)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
+            if(hasUpgrade(this.layer, 13) && upgradeEffect(this.layer, 13) > new Decimal(1)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
 	},
 
         layerShown() {return true;},
@@ -92,7 +92,7 @@ addLayer("s", {
         14: {
             title: "wip.",
             description: "wip.",
-            cost: new Decimal(1e9001),
+            cost: new Decimal(1800),
             unlocked(){ 
                 return hasUpgrade([this.layer], 22);
             },
@@ -188,6 +188,13 @@ addLayer("s", {
     buyables: {
         rows: 1,
         cols: 1,
+        respec() {
+        player[this.layer].upgradeTime = new Decimal(5)}, //**optional**, implement it to reset things and give back your currency.
+                     // Having this function makes a respec button appear
+        respecText: "bruh",
+        showRespecButton(){ 
+                return hasUpgrade([this.layer], 14);
+            },
         11: {
             title: "Boredom.",
             unlocked(){ return player[this.layer].unlocked; }, 
