@@ -3,7 +3,6 @@ addLayer("s", {
             unlocked: true,
             points: new Decimal(0),
             upgradeTime: new Decimal(0),
-            ZATIME: new Decimal(0),
         };},
 
         name: "shenanigans",
@@ -212,21 +211,6 @@ addLayer("s", {
             return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x times.";
 	    },
 	},
-    },
-clickables: {
-        rows: 1,
-        cols: 1,
-        masterButtonPress() {
-        if (player[this.layer].upgradeTime < new Decimal(60));
-        if (player[this.layer].upgradeTime = new Decimal(60)) return player[this.layer].upgradeTime = new Decimal(0);
-        },
-        masterButtonText() {
-        if (player[this.layer].upgradeTime < new Decimal(60)) return "Wait for " + Math.round(new Decimal(60).sub(player[this.layer].upgradeTime)) + " more second(s).";
-        if (player[this.layer].upgradeTime = new Decimal(60)) return "Reset 3rd upgrade's effect.";
-	},// **optional** text to display on the Master Button
-        showMasterButton() {
-        return hasUpgrade([this.layer], 14);
-        },
     },
 	hotkeys: [
 		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer); } },
