@@ -80,7 +80,7 @@ addLayer("s", {
         },
         13: {
             title: "Degrading Upgrade.",
-            description: "Boosts your plot gain by 5x initally, then linearly decreases over time (caps at 1x).",
+            description: "Boosts your plot gain by 5x initally and decreases over time.",
             cost: new Decimal(1200),
             unlocked(){ 
                 if(inChallenge("s", 11)) return false;
@@ -129,7 +129,7 @@ addLayer("s", {
         },
         23: {
             title: "Another exponent...?",
-            description: "Adds another ^1.01 to both ''Tiny desk exponent'' and ''Exponent'' upgrades.",
+            description: "Adds another ^1.01 to both ''T.D.E.'' and ''Exponent'' upgrades.",
             cost: new Decimal(100),
             unlocked(){ 
                 return hasUpgrade([this.layer], 21);
@@ -145,7 +145,7 @@ addLayer("s", {
         },
         31: {
             title: "But enough grinding, have at you!",
-            description: "Exponents all the upgrades around ''S.H.'' (excluding the first) based on unspent points.",
+            description: "Exponents most of upgrades around ''S.H.'' based on unspent points.",
             cost: new Decimal(250),
             unlocked() { 
                 return hasUpgrade([this.layer], 23);
@@ -175,7 +175,7 @@ addLayer("s", {
         },
         33: {
             title: "haha shenanigans go brrrr.",
-            description: "Boosts shenanigans gain by how many time has passed at reduced rate.",
+            description: "Boosts shenanigans gain by the passed time at reduced rate.",
             cost: new Decimal(2500),
             unlocked(){ 
                 return hasUpgrade([this.layer], 22);
@@ -241,8 +241,8 @@ challenges: {
             unlocked(){ 
                 return hasUpgrade([this.layer], 34);
 	    },
-            challengeDescription: "idk, dm me a better idea for the challenge or smth.",
-            goal: new Decimal(1e420),
+            rewardDescription: "idk, dm me a better idea for the challenge or smth.",
+            goal: return new Decimal(1e420),
 	},
 },
 	hotkeys: [
