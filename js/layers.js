@@ -49,7 +49,7 @@ addLayer("s", {
                     ["main-display",
                     ["blank", "5px"],
                     ["display-text",
-                    function() {return 'You have ' + player.s.buyables.11 + ' boring stuff.'},
+                    function() {return 'You have ' + player[this.layer].buyables("11") + ' boring stuff.'},
                     {"color": "gray", "font-size": "32px", "font-family": "Arial"}], // Height
                     "buyables"],
         },
