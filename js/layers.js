@@ -6,12 +6,12 @@ addLayer("s", {
             bigbrainmoment: new Decimal(0),
         };},
 
-        name: "test1",
+        name: "shenanigans",
         color: "#420420",
-        resource: "test2",
+        resource: "shenanigans",
         row: 0,
 
-        baseResource: "test3",
+        baseResource: "plots",
         baseAmount() {return player.points;},
 
         requires: new Decimal(1),
