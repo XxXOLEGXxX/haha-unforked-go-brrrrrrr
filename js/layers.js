@@ -41,7 +41,7 @@ addLayer("s", {
                     ["main-display",
                     "prestige-button",
                     ["blank", "5px"], // Height
-                    "upgrades", "milestones", "clickables"],
+                    "upgrades", "milestones", "clickables", "challenge"],
         },
             "Impatience": {
                 buttonStyle() {return  {'border-color': 'red', 'color': 'red'};},
@@ -83,7 +83,7 @@ addLayer("s", {
             description: "Boosts your plot gain by 5x initally, then linearly decreases over time (caps at 1x).",
             cost: new Decimal(1200),
             unlocked(){ 
-                return hasUpgrade([this.layer], 22);
+                return hasUpgrade([this.layer], 22) && inChallenge("s", 11) = false;
             },
             effect () {
                 return new Decimal(5).sub(player[this.layer].upgradeTime.div(15))
@@ -97,7 +97,7 @@ addLayer("s", {
             description: "Unlocks a button, which resets ''Degrading Upgrade.'''s effect.",
             cost: new Decimal(1800),
             unlocked(){ 
-                return hasUpgrade([this.layer], 22);
+                return hasUpgrade([this.layer], 22) && inChallenge("s", 11) = false;
             },
         },
         21: {
@@ -179,7 +179,8 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-                return new Decimal(1).mul((new Decimal(player.timePlayed)).log(60).add(1));
+                if (inChallenge("s", 11)) return new Decimal(1).mul((new Decimal(player.timePlayed)).log(3).add(1));
+                else return new Decimal(1).mul((new Decimal(player.timePlayed)).log(60).add(1));
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
@@ -227,6 +228,14 @@ clickables: {
 	},// **optional** text to display on the Master Button
         showMasterButton() {
         return hasUpgrade([this.layer], 14);
+        },
+    },
+challenges: {
+        rows: 1,
+        cols: 1,
+        11: {
+            name: "The Current Endgame.",
+            challengeDescription: "Tetrates your plot gain by 0.5 and removes ''Degrading Upgrade.'' and ''Negotiator.'', but buffs ''haha shenanigans go brrrr.'' by hell a lot."
         },
     },
 	hotkeys: [
