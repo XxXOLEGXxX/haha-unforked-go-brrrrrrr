@@ -5,7 +5,7 @@ addLayer("s", {
             upgradeTime: new Decimal(0),
         };},
 
-        name: "plots",
+        name: "shenanigans",
         color: "#420420",
         resource: "shenanigans",
         row: 0,
