@@ -19,6 +19,7 @@ addLayer("s", {
 
         gainMult() {
             let mult = new Decimal(1);
+            if (hasUpgrade("s", 33)) mult = mult.mul(upgradeEffect("s", 33));
             return mult;
         },
         gainExp() {
