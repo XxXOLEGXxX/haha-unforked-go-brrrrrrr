@@ -214,8 +214,8 @@ clickables: {
         if (player[this.layer].upgradeTime.e(60)) return player[this.layer].upgradeTime = new Decimal(0)
         },
         masterButtonText() {
-        if (player[this.layer].upgradeTime.lt(60)) return "bruh",
-        if (player[this.layer].upgradeTime.e(60)) return "Press me!", 
+        if (player[this.layer].upgradeTime.lt(60)) return "bruh";
+        if (player[this.layer].upgradeTime.e(60)) return "Press me!";
 	},// **optional** text to display on the Master Button
         showMasterButton() {
         return hasUpgrade([this.layer], 14)
