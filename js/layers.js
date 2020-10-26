@@ -10,7 +10,7 @@ addLayer("s", {
         resource: "shenanigans",
         row: 0,
 
-        baseResource: "shenanigans",
+        baseResource: "plots",
         baseAmount() {return player.points;},
 
         requires: new Decimal(1),
