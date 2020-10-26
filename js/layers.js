@@ -207,7 +207,8 @@ addLayer("s", {
             player[this.layer].buyables[this.id] = player[this.layer].buyables[this.id].add(1);
         },
             effect() {
-            let eff = player[this.layer].buyables[this.id].mul(0.01).add(1)
+            if(inChallenge("s", 11)) let eff = player[this.layer].buyables[this.id].mul(0.01).add(1).pow(2)
+            else let eff = player[this.layer].buyables[this.id].mul(0.01).add(1)
             return eff;
         },
         display() { // Everything else displayed in the buyable button after the title
@@ -236,7 +237,7 @@ challenges: {
         cols: 1,
         11: {
             name: "The Current Endgame.",
-            challengeDescription: "Tetrates your plot gain by 0.5 and removes ''Degrading Upgrade.'' and ''Negotiator.'', but ''Boredom'''s first effect is in the power of 2.",
+            challengeDescription: "Tetrates your plot gain by 0.5 and removes ''Degrading Upgrade.'' and ''Negotiator.'', but ''Boredom'''s first effect is increased to the power of 2.",
             unlocked(){ 
                 return hasUpgrade([this.layer], 34);
 	    },
