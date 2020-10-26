@@ -11,7 +11,7 @@ addLayer("s", {
         resource: "shenanigans",
         row: 0,
 
-        baseResource: "shenanigans",
+        baseResource: "plots",
         baseAmount() {return player.points;},
 
         requires: new Decimal(1),
@@ -29,13 +29,8 @@ addLayer("s", {
         update(diff){
             if(hasUpgrade(this.layer, 13) && upgradeEffect(this.layer, 13) > new Decimal(1)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
             if(player[this.layer].upgradeTime > new Decimal(60)) player[this.layer].upgradeTime = new Decimal(60)
+            player[this.layer].ZATIME = player[this.layer].ZATIME.add(diff)
 	},
-
-        update(diff2){
-            player[this.layer].ZATIME = player[this.layer].ZATIME.add(diff2)
-	},
-            
-
 
         layerShown() {return true;},
 
