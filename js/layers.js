@@ -236,11 +236,12 @@ challenges: {
         cols: 1,
         11: {
             name: "The Current Endgame.",
-            challengeDescription: "Tetrates your plot gain by 0.5 and removes ''Degrading Upgrade.'' and ''Negotiator.'', but ''Boredom'''s first effect is in the power of 2."
+            challengeDescription: "Tetrates your plot gain by 0.5 and removes ''Degrading Upgrade.'' and ''Negotiator.'', but ''Boredom'''s first effect is in the power of 2.",
             unlocked(){ 
                 return hasUpgrade([this.layer], 34);
-        },
-    },
+	    },
+	},
+},
 	hotkeys: [
 		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer); } },
 	],
