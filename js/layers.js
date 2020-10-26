@@ -208,7 +208,7 @@ addLayer("s", {
         },
             effect() {
             let eff = player[this.layer].buyables[this.id].mul(0.01).add(1)
-            if(inChallenge("s", 11)) { let eff = eff.pow(2) },
+            if(inChallenge("s", 11)) { let eff = eff.pow(2) }
             return eff;
         },
         display() { // Everything else displayed in the buyable button after the title
