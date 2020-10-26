@@ -26,8 +26,9 @@ addLayer("s", {
         },
 
         update(diff){
-            if(hasUpgrade("s", 13) && upgradeEffect([this.layer], 13).gt(1)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
-            if(upgradeEffect([this.layer], 13).lt(1)) player[this.layer].upgradeTime = new Decimal(60)
+        if(hasUpgrade(this.layer, 13) && upgradeEffect(this.layer, 13).gt(1)) { 
+        player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
+        }
     },
 
         layerShown() {return true;},
@@ -167,6 +168,20 @@ addLayer("s", {
             },
             effectDisplay() {
                 return "^^1.42";
+            },
+        },
+        33: {
+            title: "haha shenanigans go brrrr.",
+            description: "Boosts shenanigans gain by how many time has passed at reduced rate.",
+            cost: new Decimal(2500),
+            unlocked(){ 
+                return hasUpgrade([this.layer], 22);
+            },
+            effect() {
+                return player[this.layer].points.mul(new Decimal(player.timePlayed)).root(60);
+            },
+            effectDisplay() {
+                return format(this.effect()) + "x";
             },
         },
         34: {
