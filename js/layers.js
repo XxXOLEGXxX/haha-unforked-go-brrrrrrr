@@ -20,7 +20,7 @@ addLayer("s", {
         gainMult() {
             let mult = new Decimal(1);
             if (hasUpgrade("s", 33)) mult = mult.mul(upgradeEffect("s", 33));
-            if (hasUpgrade("s", 34)) mult = mult.mul(new Decimal(player[this.layer].buyables[this.id].div(10)).add(1))
+            if (hasUpgrade("s", 34)) mult = mult.mul(player[this.layer].buyables[this.id].div(10).add(1))
             return mult;
         },
         gainExp() {
