@@ -241,7 +241,8 @@ challenges: {
             unlocked(){ 
                 return hasUpgrade([this.layer], 34);
 	    },
-            challengeDescription: "idk, dm me a better idea for the challenge or smth."
+            challengeDescription: "idk, dm me a better idea for the challenge or smth.",
+            goal: new Decimal(1e420),
 	},
 },
 	hotkeys: [
