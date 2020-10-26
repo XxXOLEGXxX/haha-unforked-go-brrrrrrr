@@ -214,7 +214,7 @@ clickables: {
         if (player[this.layer].upgradeTime = new Decimal(60)) return player[this.layer].upgradeTime = new Decimal(0);
         },
         masterButtonText() {
-        if (player[this.layer].upgradeTime < new Decimal(60)) return player[this.layer].buyables[this.id] + "seconds left.";
+        if (player[this.layer].upgradeTime < new Decimal(60)) return "Wait for " + 60.sub(round(player[this.layer].upgradeTime)) + " more second(s).";
         if (player[this.layer].upgradeTime = new Decimal(60)) return "Press me!";
 	},// **optional** text to display on the Master Button
         showMasterButton() {
