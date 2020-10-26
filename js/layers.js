@@ -28,7 +28,10 @@ addLayer("s", {
         update(diff){
             if(hasUpgrade(this.layer, 13) && upgradeEffect(this.layer, 13).gt(1)) { 
             player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
-            }
+	    }
+            if(upgradeEffect(this.layer, 13).lt(1)) {
+            player[this.layer].upgradeTime = new Decimal(60)
+	    }
 	},
 
         layerShown() {return true;},
@@ -217,12 +220,11 @@ clickables: {
         rows: 1,
         cols: 1,
         masterButtonPress() {
-        if (player[this.layer].upgradeTime < new Decimal(60));
-        if (player[this.layer].upgradeTime = new Decimal(60)) return player[this.layer].upgradeTime = new Decimal(0);
+        if (player[this.layer].upgradeTime.eq(60)) return player[this.layer].upgradeTime = new Decimal(0);
         },
         masterButtonText() {
-        if (player[this.layer].upgradeTime < new Decimal(60)) return "Wait for " + Math.round(new Decimal(60).sub(player[this.layer].upgradeTime)) + " more second(s).";
-        if (player[this.layer].upgradeTime = new Decimal(60)) return "Reset 3rd upgrade's effect.";
+        if (player[this.layer].upgradeTime.lt(60)) return "Wait for " + Math.round(new Decimal(60).sub(player[this.layer].upgradeTime)) + " more second(s).";
+        if (player[this.layer].upgradeTime.eq(60)) return "Reset 3rd upgrade's effect.";
 	},// **optional** text to display on the Master Button
         showMasterButton() {
         return hasUpgrade([this.layer], 14);
