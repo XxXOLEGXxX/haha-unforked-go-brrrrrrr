@@ -50,7 +50,7 @@ addLayer("s", {
                     ["main-display",
                     ["blank", "5px"],
                     ["display-text",
-                    function() {return 'You have ' + format(player[this.layer].bigBrainMoment) + ' boring stuff.'},
+                    function() {return 'You have ' + format(player.s.bigBrainMoment) + ' boring stuff.'},
                     {"color": "gray", "font-size": "32px", "font-family": "Arial"}], // Height
                     "buyables"],
         },
