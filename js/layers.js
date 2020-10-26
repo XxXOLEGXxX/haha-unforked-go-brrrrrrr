@@ -184,11 +184,17 @@ addLayer("s", {
             },
         },
         33: {
-            title: "wip.",
-            description: "wip.",
-            cost: new Decimal(1e9001),
+            title: "haha shenanigans go brrrr.",
+            description: "Boosts shenanigans gain by how many time has passed at reduced rate.",
+            cost: new Decimal(2500),
             unlocked(){ 
                 return hasUpgrade([this.layer], 22);
+            },
+            effect() {
+                return player[this.layer].points.mul(new Decimal(player.timePlayed)).root(60);
+            },
+            effectDisplay() {
+                return format(this.effect()) + "x";
             },
         },
         34: {
