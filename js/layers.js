@@ -29,7 +29,7 @@ addLayer("s", {
         update(diff){
             player[this.layer].ZATIME = player[this.layer].ZATIME.add(diff)
             if(hasUpgrade(this.layer, 13) && upgradeEffect(this.layer, 13) > new Decimal(1)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
-            if(player[this.layer].upgradeTime > new Decimal(60)) player[this.layer].upgradeTime = new Decimal(60)
+            if(player[this.layer].upgradeTime > new Decimal(480)) player[this.layer].upgradeTime = new Decimal(60)
 	},
 
         layerShown() {return true;},
