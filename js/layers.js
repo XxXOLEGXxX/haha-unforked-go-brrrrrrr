@@ -91,7 +91,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            return new Decimal(5).sub(player[this.layer].upgradeTime.div(60));
+            return new Decimal(5).sub(player[this.layer].upgradeTime.div(15));
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
