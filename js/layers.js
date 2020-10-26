@@ -25,14 +25,9 @@ addLayer("s", {
             return new Decimal(1);
         },
 
-        update(diff){
-            if(hasUpgrade(this.layer, 13) && upgradeEffect(this.layer, 13).gt(1)) { 
-            player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
-	    }
-            if(upgradeEffect(this.layer, 13).lt(1)) {
-            player[this.layer].upgradeTime = new Decimal(60)
-	    }
-	},
+        update(0.01)
+        if(hasUpgrade(this.layer, 13) && upgradeEffect(this.layer, 13).gt(1)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
+        if(player[this.layer].upgradeTime.gt(60)) player[this.layer].upgradeTime = new Decimal(60)
 
         layerShown() {return true;},
 
@@ -82,13 +77,13 @@ addLayer("s", {
         },
         13: {
             title: "Degrading Upgrade.",
-            description: "Boosts your plot gain by 5x and decreases linearly (caps at 1x).",
+            description: "REWORKING.",
             cost: new Decimal(1200),
             unlocked(){ 
                 return hasUpgrade([this.layer], 22);
             },
-            effect() {
-            return new Decimal(5).sub(player[this.layer].upgradeTime.div(15));
+            effect () {
+                return new Decimal(5).sub(player[this.layer].upgradeTime.div(15))
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
@@ -185,6 +180,14 @@ addLayer("s", {
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
+            },
+        },
+        33: {
+            title: "wip.",
+            description: "wip.",
+            cost: new Decimal(1e9001),
+            unlocked(){ 
+                return hasUpgrade([this.layer], 22);
             },
         },
         34: {
