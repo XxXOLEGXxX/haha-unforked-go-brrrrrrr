@@ -209,7 +209,7 @@ addLayer("s", {
             canAfford() { return player[this.layer].unlocked; },
             buy() {
             player[this.layer].buyables[this.id] = player[this.layer].buyables[this.id].add(1);
-            player[this.layer].bigbrainmoment = player[this.layer].bigbrainmoment.add(1);
+            player[this.layer].bigbrainmoment = player[this.layer].buyables[this.id];
         },
             effect() {
             let eff = player[this.layer].buyables[this.id].mul(0.01).add(1)
