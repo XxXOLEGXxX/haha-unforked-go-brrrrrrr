@@ -26,7 +26,7 @@ addLayer("s", {
         },
 
         update(diff){
-            if(hasUpgrade(this.layer, 13) && upgradeEffect(this.layer, 13) < new Decimal(1)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
+            if(hasUpgrade(this.layer, 13) && upgradeEffect(this.layer, 13) > new Decimal(1)) player[this.layer].upgradeTime = player[this.layer].upgradeTime.add(diff)
             if(player[this.layer].upgradeTime > new Decimal(60)) player[this.layer].upgradeTime = new Decimal(60)
 	},
 
@@ -210,12 +210,12 @@ clickables: {
         rows: 1,
         cols: 1,
         masterButtonPress() {
-        if (player[this.layer].upgradeTime > new Decimal(60));
-        if (player[this.layer].upgradeTime = new Decimal(60)) return player[this.layer].upgradeTime = new Decimal(0);
+        if (upgradeEffect(this.layer, 13) > new Decimal(1));
+        if (upgradeEffect(this.layer, 13) = new Decimal(1)) return player[this.layer].upgradeTime = new Decimal(0);
         },
         masterButtonText() {
-        if (player[this.layer].upgradeTime > new Decimal(60)) return "bruh";
-        if (player[this.layer].upgradeTime = new Decimal(60)) return "Press me!";
+        if (upgradeEffect(this.layer, 13) > new Decimal(1)) return "bruh";
+        if (upgradeEffect(this.layer, 13) = new Decimal(1)) return "Press me!";
 	},// **optional** text to display on the Master Button
         showMasterButton() {
         return hasUpgrade([this.layer], 14);
