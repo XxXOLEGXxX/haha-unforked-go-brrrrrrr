@@ -38,7 +38,7 @@ addLayer("s", {
                     ["main-display",
                     "prestige-button",
                     ["blank", "5px"], // Height
-                    "upgrades", "milestones"],
+                    "upgrades", "milestones", "clickables"],
         },
             "Impatience": {
                 buttonStyle() {return  {'border-color': 'red', 'color': 'red'};},
@@ -188,13 +188,6 @@ addLayer("s", {
     buyables: {
         rows: 1,
         cols: 1,
-        respec() {
-        player[this.layer].upgradeTime = new Decimal(5)}, //**optional**, implement it to reset things and give back your currency.
-                     // Having this function makes a respec button appear
-        respecText: "bruh",
-        showRespecButton(){ 
-                return hasUpgrade([this.layer], 14);
-            },
         11: {
             title: "Boredom.",
             unlocked(){ return player[this.layer].unlocked; }, 
@@ -211,6 +204,17 @@ addLayer("s", {
             return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x times.";
 	    },
 	},
+    },
+clickables: {
+        rows: 1,
+        cols: 1,
+        masterButtonPress() {
+        if (player[this.layer].upgradeTime = new Decimal(1)) return player[this.layer].upgradeTime = = new Decimal(5)
+        },
+        masterButtonText: "Press me!", // **optional** text to display on the Master Button
+        showMasterButton(){
+        return hasUpgrade([this.layer], 14)
+        },
     },
 	hotkeys: [
 		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer); } },
