@@ -211,7 +211,7 @@ clickables: {
         cols: 1,
         masterButtonPress() {
         if (player[this.layer].upgradeTime > new Decimal(60));
-        if (player[this.layer].upgradeTime = new Decimal(60)) return player[this.layer].upgradeTime = new Decimal(0);
+        if (player[this.layer].upgradeTime = new Decimal(60)) return player[this.layer].upgradeTime = new Decimal(0), return player[this.layer].diff = new Decimal(0);
         },
         masterButtonText() {
         if (player[this.layer].upgradeTime > new Decimal(60)) return "bruh";
