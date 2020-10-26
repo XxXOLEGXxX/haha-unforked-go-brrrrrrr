@@ -47,7 +47,10 @@ addLayer("s", {
                 buttonStyle() {return  {'border-color': 'red', 'color': 'red'};},
                 content:
                     ["main-display",
-                    ["blank", "5px"], // Height
+                    ["blank", "5px"],
+                    ["display-text",
+                    function() {return 'You have... *yawn* ' + format(player[this.layer].buyables.11) + ' Boring stuff.'},
+                    {"color": "red", "font-size": "32px", "font-family": "Arial"}], // Height
                     "buyables"],
         },
     },
@@ -214,7 +217,7 @@ addLayer("s", {
         display() { // Everything else displayed in the buyable button after the title
                     let ret = {};
             if (hasUpgrade("s", 34)) return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x and shenanigans gain by " + buyableEffect([this.layer], [this.id]).sub(1).div(10).add(1) + "x.";
-            else return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x.";
+            else return "Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x.";
 	    },
 	},
     },
