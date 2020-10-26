@@ -2,8 +2,8 @@ addLayer("s", {
         startData() { return {
             unlocked: true,
             points: new Decimal(0),
-            ZATIME: new Decimal(0),
             upgradeTime: new Decimal(0),
+            ZATIME: new Decimal(0),
         };},
 
         name: "shenanigans",
@@ -91,7 +91,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            return new Decimal(5).sub(player[this.layer].upgradeTime.div(15));
+            return new Decimal(5).sub(player[this.layer].upgradeTime.div(60));
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
