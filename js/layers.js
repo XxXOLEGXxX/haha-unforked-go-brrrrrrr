@@ -178,7 +178,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-                return player[this.layer].points.mul(new Decimal(player.timePlayed)).root(60);
+                return player[this.layer].points.mul((new Decimal(player.timePlayed)).root(60));
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
