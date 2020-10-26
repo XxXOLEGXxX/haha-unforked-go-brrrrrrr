@@ -83,7 +83,7 @@ addLayer("s", {
             description: "Boosts your plot gain by 5x initally, then linearly decreases over time (caps at 1x).",
             cost: new Decimal(1200),
             unlocked(){ 
-                if(inChallenge("s", 11) return false;
+                if(inChallenge("s", 11)) return false;
                 else return hasUpgrade([this.layer], 22);                
             },
             effect () {
@@ -98,7 +98,7 @@ addLayer("s", {
             description: "Unlocks a button, which resets ''Degrading Upgrade.'''s effect.",
             cost: new Decimal(1800),
             unlocked(){ 
-                if(inChallenge("s", 11) return false;
+                if(inChallenge("s", 11)) return false;
                 else return hasUpgrade([this.layer], 22); 
             },
         },
