@@ -209,7 +209,8 @@ clickables: {
         rows: 1,
         cols: 1,
         masterButtonPress() {
-        if (player[this.layer].upgradeTime = new Decimal(1)) return player[this.layer].upgradeTime = new Decimal(5)
+        if (player[this.layer].upgradeTime > new Decimal(1))
+        if (player[this.layer].upgradeTime = new Decimal(1)) return player[this.layer].upgradeTime = new Decimal(5.001)
         },
         masterButtonText: "Press me!", // **optional** text to display on the Master Button
         showMasterButton(){
