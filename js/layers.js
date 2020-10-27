@@ -243,7 +243,7 @@ challenges: {
             currencyDisplayName: "plots",
             currencyInternalName: "plots",
             unlocked(){ 
-                return hasUpgrade([this.layer], 34);
+                return hasUpgrade(this.layer, 34);
 	    },
             rewardDescription: "doubles your plot gain, i guess.",
             goal: new Decimal(40000),
@@ -252,7 +252,7 @@ challenges: {
             name: "The reverser.",
             challengeDescription: "''Boredom'''s first effect decreases your point gain now, but second effect is now as powerful as first effect outside this challenge.",
             unlocked(){ 
-                return hasUpgrade([this.layer], 34);
+                return hasUpgrade(this.layer, 34);
 	    },
             rewardDescription: "Generates 10 predicted boredoms per second.",
             goal: new Decimal(40000),
