@@ -1,5 +1,33 @@
 # The Modding Tree changelog:
 
+- Fixed some numbers not displaying with enough digits.
+
+### v2.1.3.1 - 10/21/20
+- Fixed the update function.
+
+### v2.1.3 - 10/21/20
+- gainMult and gainExp are now optional.
+- Layer unlocking is now kept on reset.
+- Game should start up faster.
+- Layer updates now have a determined order and starts with earlier-rowed layers.
+- Automation now has a determined order and starts with later-rowed layers.
+- Fixed issues with resetting clickables and challenges.
+- Commas should no longer appear in the decimal places of a number.
+- Fixed potential issue in displaying the tree.
+
+### v2.1.2 - 10/19/20
+- Added buyUpgrade function (buyUpg still works though)
+- Added author name to modInfo.
+- Fix to crash caused when the name of a subtab or microtab is changed.
+- Fixes to outdated information in docs.
+- Improvements to Discord links.
+- Thank you to thepaperpilot for contributing to this update!
+
+### v2.1.1 - 10/17/20
+- Added resource-display component, which displays the base currency for the prestige layer, as well as the best
+    and/or total of this layer's prestige currency.
+- Fixed the value for the base currency not updating in resource-display.
+
 ## v2.1: We should have thought of this sooner! - 10/17/20
 - Moved most of the code users will want to edit to mod.js, added documentation for it.
     - Specifically, modInfo, VERSION, canGenPoints, getPointGen, and maxTickLength
