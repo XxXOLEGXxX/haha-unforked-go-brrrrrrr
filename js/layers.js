@@ -244,7 +244,7 @@ challenges: {
                 return hasUpgrade([this.layer], 34);
 	    },
             rewardDescription: "idk, dm me a better idea for the challenge or smth.",
-            goal: new Decimal(60000),
+            goal: player.s.points("60000"),
 	},
         12: {
             name: "The reverser.",
@@ -253,7 +253,7 @@ challenges: {
                 return hasUpgrade([this.layer], 34);
 	    },
             rewardDescription: "Generates 10 predicted boredoms per second.",
-            goal: new Decimal("40000"),
+            goal: Decimal("40000"),
 	},
 },
 	hotkeys: [
