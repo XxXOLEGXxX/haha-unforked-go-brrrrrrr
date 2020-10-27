@@ -244,7 +244,7 @@ challenges: {
                 return hasUpgrade([this.layer], 34);
 	    },
             rewardDescription: "idk, dm me a better idea for the challenge or smth.",
-            goal: Decimal.player.s.points = 50000,
+            goal: player[this.layer].points("50000"),
 	},
 },
 	hotkeys: [
