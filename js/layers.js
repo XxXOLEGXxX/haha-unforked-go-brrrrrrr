@@ -239,8 +239,7 @@ challenges: {
         cols: 2,
         11: {
             name: "Your Usual Challenge",
-            challengeDescription: "Tetrates your plot gain by 0.5 and removes ''Degrading Upgrade.'' and ''Negotiator.'', but ''Boredom'''s first effect is increased to the power of 2.",	    goal: new Decimal("e75"),
-	    currencyDisplayName: "plots",
+            challengeDescription: "Tetrates your plot gain by 0.5 and removes ''Degrading Upgrade.'' and ''Negotiator.'', but ''Boredom'''s first effect is increased to the power of 2.",
 	    currencyInternalName: "plots",
             rewardDescription: "doubles your plot gain, i guess.",
             unlocked(){ 
