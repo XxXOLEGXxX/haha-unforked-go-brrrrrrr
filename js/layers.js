@@ -242,7 +242,7 @@ challenges: {
                 return hasUpgrade([this.layer], 34);
 	    },
             rewardDescription: "idk, dm me a better idea for the challenge or smth.",
-            goal: new Decimal(1e9999999),
+            goal: new Decimal(9999999999999),
 	},
 },
 	hotkeys: [
