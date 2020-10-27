@@ -3,6 +3,7 @@ addLayer("s", {
             unlocked: true,
             points: new Decimal(0),
             upgradeTime: new Decimal(0),
+            bigbrainmoment: new Decimal(0),
         };},
 
         name: "shenanigans",
@@ -10,7 +11,7 @@ addLayer("s", {
         resource: "shenanigans",
         row: 0,
 
-        baseResource: "plots",
+        baseResource: "shenanigans",
         baseAmount() {return player.points;},
 
         requires: new Decimal(1),
@@ -47,7 +48,10 @@ addLayer("s", {
                 buttonStyle() {return  {'border-color': 'red', 'color': 'red'};},
                 content:
                     ["main-display",
-                    ["blank", "5px"], // Height
+                    ["blank", "5px"],
+                    ["display-text",
+                    function() {return 'You have ' + player[this.layer].bigbrainmoment + ' boring stuff.'},
+                    {"color": "gray", "font-size": "32px", "font-family": "Arial"}], // Height
                     "buyables"],
         },
     },
@@ -205,6 +209,7 @@ addLayer("s", {
             canAfford() { return player[this.layer].unlocked; },
             buy() {
             player[this.layer].buyables[this.id] = player[this.layer].buyables[this.id].add(1);
+            player[this.layer].bigbrainmoment = player[this.layer].bigbrainmoment.add(1);
         },
             effect() {
             let eff = player[this.layer].buyables[this.id].mul(0.01).add(1)
@@ -242,7 +247,7 @@ challenges: {
                 return hasUpgrade([this.layer], 34);
 	    },
             rewardDescription: "idk, dm me a better idea for the challenge or smth.",
-            goal: new Decimal(9999999999999),
+            goal: new Decimal(1e9999999),
 	},
 },
 	hotkeys: [
