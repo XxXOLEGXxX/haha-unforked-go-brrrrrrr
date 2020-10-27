@@ -244,7 +244,7 @@ challenges: {
                 return hasUpgrade([this.layer], 34);
 	    },
             rewardDescription: "idk, dm me a better idea for the challenge or smth.",
-            goal: new Decimal("60000"),
+            goal: new Decimal(60000),
 	},
         12: {
             name: "The reverser.",
