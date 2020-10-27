@@ -1,12 +1,12 @@
 let modInfo = {
-	name: "Antimatter Tree.",
+	name: "Antimatter Tree...?",
 	id: "olegat",
 	pointsName: "plots",
 	discordName: "Low Poly Pichu#0530",
 	discordLink: "",
 	changelogLink: "https://github.com/Acamaeda/The-Modding-Tree/blob/master/changelog.md",
     offlineLimit: 24,  // In hours
-    initialStartPoints: new Decimal(0) // Used for hard resets and new players
+    initialStartPoints: new Decimal (0) // Used for hard resets and new players
 }
 
 // Set your version in num and name
@@ -66,7 +66,7 @@ var displayThings = [
 
 // Determines when the game "ends"
 function isEndgame() {
-	return player.points.gte(new Decimal("9999999999"))
+	return player.points.gte(new Decimal("1eee69"))
 }
 
 
