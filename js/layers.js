@@ -240,23 +240,10 @@ challenges: {
         11: {
             name: "Your Usual Challenge",
             challengeDescription: "Tetrates your plot gain by 0.5 and removes ''Degrading Upgrade.'' and ''Negotiator.'', but ''Boredom'''s first effect is increased to the power of 2.",
-            currencyDisplayName: "plots",
-            currencyInternalName: "plots",
-            unlocked(){ 
-                return hasUpgrade(this.layer, 34);
-	    },
             rewardDescription: "doubles your plot gain, i guess.",
-            goal: new Decimal(40000),
+            unlocked(){ return hasUpgrade(this.layer, 34) },
+            goal: new Decimal("40000"),
         },
-        12: {
-            name: "wip",
-            challengeDescription: "get wipped.",
-            unlocked(){ 
-                return hasUpgrade(this.layer, 34);
-	    },
-            rewardDescription: "Generates 10 predicted boredoms per second.",
-            goal: new Decimal(40000),
-	},
 },
 	hotkeys: [
 		{ key: "s", desc: "S: Reset for shenanigans", onPress() { doReset(this.layer); } },
