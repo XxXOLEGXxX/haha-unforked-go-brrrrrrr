@@ -47,7 +47,7 @@ addLayer("s", {
                 buttonStyle() {return  {'border-color': 'red', 'color': 'red'};},
                 content:
                     [["display-text",
-                    function() {return 'You have ' + player[this.layer].buyables[11] + ' boring stuff!'},
+                    function() {return 'You have ' + format(tmp.buyables.s[11]) + ' boring stuff!'},
                     {"color": "gray", "font-size": "32px", "font-family": "Arial"}],
                     "buyables"],
         },
