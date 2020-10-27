@@ -249,8 +249,8 @@ challenges: {
             goal: new Decimal(40000),
         },
         12: {
-            name: "The reverser.",
-            challengeDescription: "''Boredom'''s first effect decreases your point gain now, but second effect is now as powerful as first effect outside this challenge.",
+            name: "wip",
+            challengeDescription: "get wipped.",
             unlocked(){ 
                 return hasUpgrade(this.layer, 34);
 	    },
