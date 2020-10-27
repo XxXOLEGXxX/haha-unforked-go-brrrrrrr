@@ -1,5 +1,5 @@
 let modInfo = {
-	name: "Antimatter Tree...?",
+	name: "Antimatter Tree.",
 	id: "olegat",
 	pointsName: "plots",
 	discordName: "Low Poly Pichu#0530",
