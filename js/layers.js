@@ -240,11 +240,12 @@ challenges: {
         11: {
             name: "Your Usual Challenge",
             challengeDescription: "Tetrates your plot gain by 0.5 and removes ''Degrading Upgrade.'' and ''Negotiator.'', but ''Boredom'''s first effect is increased to the power of 2.",
+            currencyDisplayName: "plots",
+            currencyInternalName: "plots",
             unlocked(){ 
                 return hasUpgrade([this.layer], 34);
 	    },
             rewardDescription: "doubles your plot gain, i guess.",
-
             goal: new Decimal(40000),
         },
         12: {
