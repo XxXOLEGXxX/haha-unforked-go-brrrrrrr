@@ -3,7 +3,6 @@ addLayer("s", {
             unlocked: true,
             points: new Decimal(0),
             upgradeTime: new Decimal(0),
-            bigbrainmoment: new Decimal(0),
         };},
 
         name: "shenanigans",
@@ -49,9 +48,6 @@ addLayer("s", {
                 content:
                     ["main-display",
                     ["blank", "5px"],
-                    ["display-text",
-                    function() {return 'You have ' + player[this.layer].bigbrainmoment + ' boring stuff.'},
-                    {"color": "gray", "font-size": "32px", "font-family": "Arial"}], // Height
                     "buyables"],
         },
     },
