@@ -8,8 +8,6 @@ var LAYERS = Object.keys(layers);
 
 var hotkeys = {};
 
-var maxRow = 0;
-
 function updateHotkeys()
 {
     hotkeys = {};
@@ -115,11 +113,9 @@ function updateLayers(){
 
         if(!layers[layer].componentStyles) layers[layer].componentStyles = {}
         if(layers[layer].symbol === undefined) layers[layer].symbol = layer.charAt(0).toUpperCase() + layer.slice(1)
-        if(layers[layer].unlockOrder === undefined) layers[layer].unlockOrder = []
-        if(layers[layer].gainMult === undefined) layers[layer].gainMult = new Decimal(1)
-        if(layers[layer].gainExp === undefined) layers[layer].gainExp = new Decimal(1)
+        if(layers[layer].unlockOrder === undefined) layers[layer].unlockOrder = 0
 
-        let row = layers[layer].row
+        row = layers[layer].row
         if(!ROW_LAYERS[row]) ROW_LAYERS[row] = {}
         if(!TREE_LAYERS[row] && !isNaN(row)) TREE_LAYERS[row] = []
         if(!OTHER_LAYERS[row] && isNaN(row)) OTHER_LAYERS[row] = []
@@ -129,8 +125,6 @@ function updateLayers(){
         
         if (!isNaN(row)) TREE_LAYERS[row].push({layer: layer, position: position})
         else OTHER_LAYERS[row].push({layer: layer, position: position})
-
-        if (maxRow < layers[layer].row) maxRow = layers[layer].row
         
     }
     for (row in OTHER_LAYERS) {
@@ -144,6 +138,7 @@ function updateLayers(){
 
 function addLayer(layerName, layerData){ // Call this to add layers from a different file!
     layers[layerName] = layerData
+    updateLayers()
 }
 
 // If data is a function, return the result of calling it. Otherwise, return the data.
