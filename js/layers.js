@@ -214,8 +214,8 @@ addLayer("s", {
         },
         display() { // Everything else displayed in the buyable button after the title
                     let ret = {};
-            if (hasUpgrade("s", 34)) return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x and shenanigans gain by " + buyableEffect([this.layer], [this.id]).sub(1).div(10).add(1) + "x.";
-            else return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect([this.layer], [this.id]) + "x.";
+            if (hasUpgrade("s", 34)) return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect(this.layer, this.id) + "x and shenanigans gain by " + buyableEffect(this.layer, this.id).sub(1).div(10).add(1) + "x.";
+            else return "Amount: " + player[this.layer].buyables[this.id] + "\n\ Knowing that you're being forced to grind the plots, you're getting more bored and it somehow magically boosts your plot gain by " + buyableEffect(this.layer, this.id) + "x.";
 	    },
 	},
     },
