@@ -181,7 +181,7 @@ addLayer("s", {
                 return hasUpgrade([this.layer], 22);
             },
             effect() {
-            return new Decimal(1).mul((new Decimal(player.timePlayed)).log(60).add(1));
+            return new Decimal(1).mul((new Decimal(player.timePlayed)).max(1).log(60).add(1));
             },
             effectDisplay() {
                 return format(this.effect()) + "x";
