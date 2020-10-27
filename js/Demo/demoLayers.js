@@ -279,7 +279,7 @@ addLayer("c", {
                 buttonStyle() {return  {'color': 'orange'}},
                 content:
                     ["main-display",
-                    "prestige-button",
+                    "prestige-button", "resource-display",
                     ["blank", "5px"], // Height
                     ["raw-html", function() {return "<button onclick='console.log(`yeet`)'>'HI'</button>"}],
                     ["display-text",
@@ -369,12 +369,7 @@ addLayer("f", {
     base: 3,
     roundUpCost: true,
     canBuyMax() {return hasAchievement('a', 13)},
-    gainMult() {
-        return new Decimal(1)
-    },
-    gainExp() {
-        return new Decimal(1)
-    },
+
     row: 1,
     layerShown() {return true}, 
     branches: ["c"], // When this layer appears, a branch will appear from this layer to any layers here. Each entry can be a pair consisting of a layer id and a color.
