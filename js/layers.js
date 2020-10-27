@@ -235,7 +235,7 @@ clickables: {
         },
     },
 challenges: {
-        rows: 1,
+        rows: 2,
         cols: 1,
         11: {
             name: "Your usual challenge.",
