@@ -235,8 +235,8 @@ clickables: {
         },
     },
 challenges: {
-        rows: 2,
-        cols: 1,
+        rows: 1,
+        cols: 2,
         11: {
             name: "Your usual challenge.",
             challengeDescription: "Tetrates your plot gain by 0.5 and removes ''Degrading Upgrade.'' and ''Negotiator.'', but ''Boredom'''s first effect is increased to the power of 2.",
