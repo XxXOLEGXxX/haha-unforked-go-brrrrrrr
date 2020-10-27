@@ -238,13 +238,22 @@ challenges: {
         rows: 1,
         cols: 1,
         11: {
-            name: "The Current Endgame.",
+            name: "Your usual challenge.",
             challengeDescription: "Tetrates your plot gain by 0.5 and removes ''Degrading Upgrade.'' and ''Negotiator.'', but ''Boredom'''s first effect is increased to the power of 2.",
             unlocked(){ 
                 return hasUpgrade([this.layer], 34);
 	    },
             rewardDescription: "idk, dm me a better idea for the challenge or smth.",
             goal: new Decimal("60000"),
+	},
+        12: {
+            name: "The reverser.",
+            challengeDescription: "''Boredom'''s first effect decreases your point gain now, but second effect is now as powerful as first effect outside this challenge.",
+            unlocked(){ 
+                return hasUpgrade([this.layer], 34);
+	    },
+            rewardDescription: "Generates 10 predicted boredoms per second.",
+            goal: new Decimal("40000"),
 	},
 },
 	hotkeys: [
